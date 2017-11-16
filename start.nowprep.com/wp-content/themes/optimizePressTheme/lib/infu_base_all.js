@@ -1032,7 +1032,8 @@ debugger;
                                 window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
                                 window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
-                                window.location.href.indexOf("ready-power-v5/order-info-v5") > 0) {
+                                window.location.href.indexOf("ready-power-v5/order-info-v5") > 0 ||
+                                window.location.href.indexOf("ready-power-v8/order-info") > 0) {
                         newOrder1 = true;
                     } else if (window.location.href.indexOf("/order-info-v1") > 0 || window.location.href.indexOf("/order-info-v2") > 0) {
                         newOrder = true;
