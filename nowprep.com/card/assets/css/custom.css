@@ -1,0 +1,670 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+body {
+	margin: 0px!important;
+	font-family: 'Lato', sans-serif !important;
+	padding: 0px!important;
+}
+p {
+	font-family: 'Lato', sans-serif !important;
+	font-size: 16px;
+	color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif !important;
+}
+a:hover {
+	text-decoration: none !important;
+	color: #650606 !important;
+}
+.wrapper .container, .wrapper .container-fluid, footer {
+	max-width: 320px !important;
+}
+.wrapper section {
+	max-width: 320px;
+	margin: 0 auto;
+}
+.container-pass {
+	padding-left: 0px!important;
+	padding-right: 0px!important
+}
+.wrapper {
+	width: 100%
+}
+section#logosec {
+	padding: 10px 0px;
+	background: #f4f4f4;
+	-webkit-box-shadow: 0px 2px 5px -1px rgba(82,82,82,1);
+	-moz-box-shadow: 0px 2px 5px -1px rgba(82,82,82,1);
+	box-shadow: 0px 2px 5px -1px rgba(82,82,82,1);
+	margin-bottom: 6px;
+}
+img.logo {
+	max-width: 210px;
+	margin: 0 auto;
+}
+section#as-seen-on-sec {
+	background: #f0f7fd;
+}
+.asseenlogosec {
+	float: left;
+	width: 100%;
+}
+img.v-card-arrow {
+    width: 40px;
+    position: absolute;
+    left: 2px;
+    top: -30px;
+}
+img.v-card-arrow.arrw {
+    top: -16px;
+}
+.asseenlogosec .asseen-text {
+	float: left;
+	width: 34%;
+	text-transform: uppercase;
+	padding: 4% 0;
+	font-size: 16px;
+}
+.asseen-logos {
+	float: left;
+	width: 66%;
+	line-height: 50px;
+}
+.asseen-logos img {
+	width: 16%;
+	padding: 3px;
+}
+section#cardsec-top h2 {
+	text-align: center;
+	color: #383838;
+	font-weight: 800;
+	font-size: 20px;
+	margin-bottom: 20px;
+	line-height: 25px;
+}
+section#cardsec-top h2 span, .most-important-sec h3 span, section#customers-say h2 span, .yesnosec-popup h3 span {
+	color: #e32726;
+}
+img.v-card {
+	margin: 0 auto;
+}
+section.getstarted-sec {
+	margin: 0px auto 15px;
+}
+.most-important-sec {
+	background: #e2ebf2;
+	padding: 10px;
+}
+.most-important-sec h3 {
+	text-align: center;
+	line-height: 28px;
+	font-weight: 800;
+	font-size: 23px;
+	margin: 5px 0px 10px;
+}
+.money-bag-sec p {
+    text-align: center;
+    padding-top: 10px;
+}
+section.getstarted-sec ul, section#sales-sec3 ul {
+	padding: 10px 0px;
+	list-style: none;
+	margin-bottom: 0px;
+}
+section.getstarted-sec ul li, section#sales-sec3 ul li {
+	background: url(../images/tick-mark-icon.png) no-repeat;
+	background-size: 24px;
+	padding-left: 34px;
+	background-position: 0px 6px;
+	font-size: 15px;
+	padding-bottom: 8px;
+}
+span.likebtn {
+    width: 30px !important;
+    display: inline-table;
+    padding-left: 5px;
+}
+section.getstarted-sec ul li strong, section#sales-sec3 ul li strong {
+	font-weight: 800;
+}
+section#form-sec-home {
+	background: #c90017;
+	border: #000 2px solid;
+	padding-bottom: 13px;
+}
+section#form-sec-home form .input-group {
+	border: #000 2px solid;
+	margin: 12px 0px;
+	border-radius: 4px;
+}
+section#form-sec-home form button {
+	background: #ffc900;
+	background: -moz-linear-gradient(top, #ffc900 1%, #ff7c0b 100%);
+	background: -webkit-linear-gradient(top, #ffc900 1%, #ff7c0b 100%);
+	background: linear-gradient(to bottom, #ffc900 1%, #ff7c0b 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc900', endColorstr='#ff7c0b', GradientType=0 );
+	background: #258f20;
+	background: -moz-linear-gradient(top, #48d94e 1%, #258f20 100%);
+	background: -webkit-linear-gradient(top, #48d94e 1%, #258f20 100%);
+	background: linear-gradient(to bottom, #48d94e 1%, #258f20 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48d94e', endColorstr='#258f20', GradientType=0 );
+	border: #95989a 2px solid;
+	color: #fff;
+	font-weight: 800;
+	font-size: 17px;
+}
+section#form-sec-home form button:hover{
+	background: #58d05d;
+	background: -moz-linear-gradient(top, #066102 1%, #58d05d 100%);
+	background: -webkit-linear-gradient(top, #066102 1%, #58d05d 100%);
+	background: linear-gradient(to bottom, #066102 1%, #58d05d 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066102', endColorstr='#58d05d', GradientType=0 );
+	color: #fff !important;
+}
+p.locksec {
+	text-align: center;
+	padding-top: 10px;
+	color: #fff;
+	margin-bottom: 0px;
+}
+section#customers-say {
+	padding: 15px 0px;
+}
+section#customers-say h2 {
+	text-align: center;
+	line-height: 24px;
+	font-weight: 800;
+	font-size: 21px;
+	color: #484848;
+	margin: 10px 0px 20px;
+}
+.image-with-text {
+	width: 100%;
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.man-img {
+	width: 30%;
+	float: left;
+	padding-right: 10px;
+	vertical-align: middle;
+	display: table-cell;
+    padding-top:8px;
+}
+.man-text {
+	float: left;
+	width: 70%;
+}
+p.name-man {
+	color: #e32726;
+	font-weight: 800;
+	font-size: 14px;
+}
+.creatingcard h4 {
+	color: #fff;
+	text-align: center;
+	line-height: 28px;
+	font-weight: 800;
+	font-size: 23px;
+}
+h2.secondry {
+    margin-top: 0px;
+}
+section#cardsec-top h5 {
+    text-align: center;
+    color: #000000;
+    font-weight: 800;
+    font-size: 37px;
+    line-height: 25px;
+    border: #fff 2px solid;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 0px 0px 4px rgba(150, 150, 150, 1);
+}
+section#cardsec-top h4 {
+    text-align: center;
+    color: #000000;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 25px;
+}
+/* Primary Emergency Contact Css */
+.pri-datasec h3 {
+    text-align: left !important;
+}
+section#emergency-contact-form {
+	margin: 0 auto;
+	display: table;
+}
+.ec-formsec {
+	background: #e31d1a;
+	border-radius: 10px;
+	padding-bottom: 13px;
+	margin: 0px 10px !important;
+}
+.form-logo-textsec {
+	float: left;
+	width: 100%;
+	padding-top: 8px;
+	margin-bottom: 8px;
+}
+.form-logo-textsec .form-logo-pmsec {
+	float: left;
+	width: 40%;
+}
+.form-logo-pmsec img {
+	border-right: #fff 1px solid;
+	padding-right: 5%;
+	margin: 0 auto;
+}
+.form-text-pmsec {
+	float: left;
+	width: 60%;
+}
+.form-text-pmsec h3 {
+	color: #fff;
+	font-size: 15px;
+	margin: 0px;
+	padding: 1% 0;
+	font-weight: 600;
+}
+.form-textsec {
+	background: #fff;
+	border-radius: 15px;
+	padding: 10px;
+}
+.form-textsec h3 {
+	font-size: 14px;
+	text-align: center;
+	margin: 0px;
+	font-weight: 600;
+	color: #e31d1a;
+	margin-bottom: 10px;
+}
+.form-textsec .input-group {
+	background: #dcf5ff !important;
+	border: #ababab 1px solid;
+	margin-bottom: 10px;
+}
+.form-textsec .input-group:nth-last-child(1) {
+	margin-bottom: 0px;
+}
+.form-textsec span.input-group-addon {
+	border: none;
+	background: transparent;
+	padding: 5px;
+}
+.form-textsec input {
+	border: none;
+	box-shadow: none;
+	background: none;
+	height: 45px;
+	padding-left: 0px;
+}
+section#emergency-contact-form button,section#cardsec-top button, a.complete-order-btn, section#order-sec1 button {
+	background: #066102;
+	background: -moz-linear-gradient(top, #58d05d 1%, #066102 100%);
+	background: -webkit-linear-gradient(top, #58d05d 1%, #066102 100%);
+	background: linear-gradient(to bottom, #58d05d 1%, #066102 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58d05d', endColorstr='#066102', GradientType=0 );
+	border: none;
+	color: #fff;
+	font-weight: 800;
+	font-size: 20px;
+	border-radius: 20px;
+	padding: 10px 43px;
+	margin: 0 auto;
+	display: table;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+section#emergency-contact-form button:hover, a.complete-order-btn:hover, section#order-sec1 button:hover {
+	background: #58d05d;
+	background: -moz-linear-gradient(top, #066102 1%, #58d05d 100%);
+	background: -webkit-linear-gradient(top, #066102 1%, #58d05d 100%);
+	background: linear-gradient(to bottom, #066102 1%, #58d05d 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066102', endColorstr='#58d05d', GradientType=0 );
+	color: #fff !important;
+}
+section#gray-footer-logo {
+	background: #e7e7e7;
+	padding: 10px 0px;
+}
+section#gray-footer-logo .asseen-text {
+	text-transform: none;
+	font-weight: 600;
+	color: #004a98;
+}
+::-webkit-input-placeholder {
+font-size: 11px;
+}
+::-moz-placeholder {
+font-size: 11px;
+}
+:-ms-input-placeholder {
+font-size: 11px;
+}
+:-moz-placeholder {
+font-size: 11px;
+}
+.yesnosec-popup {
+	background: #fff;
+	border-radius: 10px;
+	margin: 9px;
+	padding: 10px;
+	margin-top: 15px;
+}
+p.pricesec {
+    text-align: center;
+    font-size: 36px;
+    color: #e32726;
+    font-weight: 800;
+}
+.yesnosec-popup h3 {
+	text-align: center;
+	font-size: 18px;
+	margin-top: 0px;
+	font-weight: 800;
+	line-height: 22px;
+}
+section#emergency-contact-form .modal-content {
+	background: #e31d1a;
+	margin-top: 40%;
+}
+section#emergency-contact-form .modal-header {
+	border: none;
+}
+a.close span::before {
+	color: #fff !important;
+}
+a.close {
+	opacity: 1 !important;
+	font-size: 26px;
+	margin-top: -8px !important;
+}
+.twobuttonsec {
+	text-align: center;
+	padding: 20px 0px;
+}
+.twobuttonsec a {
+	background: #066102;
+	background: -moz-linear-gradient(top, #58d05d 1%, #066102 100%);
+	background: -webkit-linear-gradient(top, #58d05d 1%, #066102 100%);
+	background: linear-gradient(to bottom, #58d05d 1%, #066102 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58d05d', endColorstr='#066102', GradientType=0 );
+	border: none;
+	color: #000000;
+	font-weight: 800;
+	font-size: 19px;
+	border-radius: 20px;
+	padding: 5px 35px;
+	margin: 0px 5px;
+}
+/* Primary Emergency Contact Css */
+/* sales Css */
+button.sales-btn {
+    padding: 10px !important;
+}
+section#cardsec-top h3 {
+	text-align: center;
+	color: #000000;
+	font-weight: 400;
+	font-size: 16px;
+	margin-bottom: 20px;
+	line-height: 22px;
+}
+section#cardsec-top h3 span {
+	color: #e32726;
+	font-weight: 800;
+	font-size: 23px;
+}
+section#sales-sec2 {
+	background: #00518a;
+	padding: 10px 0px;
+	margin-bottom: 20px;
+}
+section#sales-sec2 p {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+}
+section#sales-sec2 a.complete-order-btn {
+	margin-bottom: -32px;
+}
+section#sales-sec3 h3 {
+	text-align: center;
+	line-height: 24px;
+	font-weight: 400;
+	font-size: 21px;
+	color: #000000;
+	margin: 20px 0px;
+}
+section#sales-sec3 h3 span {
+	font-weight: 800;
+}
+.sales-mid-img .col-xs-12 {
+	padding: 0px;
+}
+p.sec4text {
+	text-align: center;
+	padding-top: 11px;
+	font-size: 17px;
+	line-height: 23px;
+}
+.nameful {
+	clear: both;
+	margin:2px 0;
+    margin-bottom: 6px;
+}
+.form-textsec span.glyphicon:before {
+    font-size: 11px !important;
+    color: #e31d1a !important;
+}
+.nameful strong {
+    margin-left: 6px;
+    margin-right: 2px;
+    color: #000;
+    font-weight: 600;
+    font-size: 13px;
+}
+span.nameborder {
+	border-bottom: 1px solid #a9a9a9;
+	width:188px;
+	display: table;
+	float: right;
+	font-size:12px;
+	    margin-top: 1px;
+}
+span.mailborder {
+    border-bottom: 1px solid #a9a9a9;
+    width: 212px;
+    display: table;
+    float: right;
+    font-size: 12px;
+    margin-top: 1px;
+}
+span.mainphone {
+    border-bottom: 1px solid #a9a9a9;
+    display: table;
+    float: right;
+    font-size: 12px;
+    margin-top: 1px;
+    margin-right: 7px;
+    width: 203px;
+}
+span.sendphone {
+    border-bottom: 1px solid #a9a9a9;
+    display: table;
+    float: right;
+    font-size: 12px;
+    margin-top: 2px;
+    width: 146px;
+}
+span.homeaddress {
+    border-bottom: 1px solid #a9a9a9;
+    width: 96%;
+    display: table;
+    float: right;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+.nameful .glyphicon {
+	top:0;
+	    line-height: 0;
+}
+.clear {
+	clear: both;
+}
+.borderdot {
+	border-bottom: 2px dotted #e31d1a;
+    margin-bottom:12px;
+}
+.nameful2 {
+    width:100%;
+    float: left;
+    margin-bottom:6px;
+}
+.nameful3 {
+    width: 100%;
+    float: left;
+    margin-bottom:6px;
+}
+/* sales Css */
+/* Order Css */
+section#order-sec1 h2 {
+	font-size: 19px;
+	font-weight: 800;
+}
+.step1-form input {
+	border-radius: 10px !important;
+	border: #969696 2px solid;
+}
+.step1-form .input-group {
+	margin-bottom: 10px;
+	width: 100%;
+}
+.step1-form .emailfild {
+	float: left;
+	width: 49% !important;
+	margin-right: 5px;
+}
+.step1-form .phonenumber {
+	float: left;
+	width: 49% !important;
+	margin-right: 0px !important;
+}
+.city {
+	float: left;
+	width: 30% !important;
+	margin-right: 5px;
+}
+.state {
+	float: left;
+	width: 30% !important;
+	margin-right: 5px;
+}
+.zipcode {
+	width: 36% !important;
+}
+.ex-date {
+	width: 75% !important;
+	float: left;
+	margin-right: 5px;
+}
+.cvv {
+	width: 23% !important;
+}
+section#order-sec1 button {
+	margin-bottom: 20px;
+}
+/* Order Css */
+/* progress-bar */
+p.completed,.completed_without_checkbox {
+    color: green;
+    font-size: 17px;
+}
+p.completed i {
+    padding-right: 6px;
+}
+.loading_content {
+    text-align: center;
+}
+div#dwnc {
+    margin: 0 auto;
+    width: 255px;
+    background: #49c201 none repeat scroll 0 0;
+    border-bottom: 3px solid #3a9b01;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+div#dwnc a {
+    color: #fff;
+    font-size: 17px;
+}
+a.step_button i {
+    padding-right: 11px;
+    font-size: 21px;
+    top: 4px;
+}
+div#dwnc a:hover {
+    color: #ffffff !important;
+}
+div#dwnc:hover {
+    background: #3a9b01 none repeat scroll 0 0;
+    border-bottom: 3px solid #147500;
+}
+
+button.downlord {
+    font-size: 18px !important;
+    padding: 13px 15px !important;
+}
+p.upsl-p {
+    text-align: center;
+}
+img.upslimg {
+    margin-bottom: 20px;
+}
+
+/* progress-bar */
+/* CSS Footer*/
+footer {
+	border-top: #8e8e8e 2px solid;
+	margin: 0 auto;
+}
+p.link-footer {
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 14px;
+    padding-top: 7px;
+}
+p.link-footer a {
+    color: #000;
+}
+p.link-footer a:hover{color:#e32726 !important;}
+p.copyright {
+	font-size: 12px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 2px;
+}
+@media screen and (min-device-width:300px) and (max-device-width: 767px){
+	span.nameborder {
+	width:200px;
+}
+span.mailborder {
+	width: 214px;
+}
+span.mainphone {
+    width: 59px;
+}
+span.sendphone {
+    width: 59px;
+}
+}

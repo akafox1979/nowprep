@@ -1,0 +1,41 @@
+atob(new RegExp('[\?&]c=([^&#]*)').exec(window.location.href)[1])
+
+<form accept-charset="UTF-8" action="https://vp389.infusionsoft.com/app/form/process/8cd6bd899cd77d9377bf2cee1e2efab4" class="infusion-form" id="inf_form_8cd6bd899cd77d9377bf2cee1e2efab4" method="POST">
+    <input name="inf_form_xid" type="hidden" value="8cd6bd899cd77d9377bf2cee1e2efab4" />
+    <input name="inf_form_name" type="hidden" value="Step #1 (Registration)" />
+    <input name="infusionsoft_version" type="hidden" value="1.68.0.95" />
+    <div class="infusion-field">
+        <label for="inf_field_FirstName">Full Name *</label>
+        <input class="infusion-field-input-container" id="inf_field_FirstName" name="inf_field_FirstName" type="text" />
+    </div>
+    <div class="infusion-field">
+        <label for="inf_field_Email">Email *</label>
+        <input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email" type="text" />
+    </div>
+    <div class="infusion-submit">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<script type="text/javascript" src="https://vp389.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+
+<script type="text/javascript" src="https://vp389.infusionsoft.com/app/webTracking/getTrackingCode"></script>
+<script>
+jQuery(function($){
+e.preventDefault();
+  $("#free_card").submit(function(e){
+if($('input["firstname"]).val()=="" || $('input["firstname"]).val()==null){
+
+} else {
+var dataForm = $(this).serializeArray();
+var dataFields = {inf_form_xid:"8cd6bd899cd77d9377bf2cee1e2efab4",inf_form_name:"Step #1 (Registration)",infusionsoft_version:"1.68.0.95",inf_field_FirstName:input["firstname"]).val(),inf_field_Email:input["email"]).val()};
+$.ajax({ type: "POST",
+             url: "https://vp389.infusionsoft.com/app/form/process/8cd6bd899cd77d9377bf2cee1e2efab4",
+            data: dataFields,
+            success: function () {
+                debugger;
+            }
+          });
+}
+});
+});
+</script>
