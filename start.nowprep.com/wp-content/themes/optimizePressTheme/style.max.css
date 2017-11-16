@@ -1,0 +1,293 @@
+/*
+Theme Name: OptimizePress
+Theme URI: http://www.optimizepress.com/
+Description: OptimizePress is the essential theme for marketers. Create squeeze pages, sales letters and much more with ease.
+Version: 2.5.10.2
+Author: OptimizePress
+Author URI: http://www.optimizepress.com/
+*/
+
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Resetting the senseless reset font:inherit; on all tags */
+em, i { font-style: italic; }
+strong, b { font-weight: bold; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Page Layout */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+.container {
+    margin: 0 auto;
+    width: 660px;
+    height: auto;
+    text-align: center;
+}
+
+#header {
+    background: #004a7f;
+    background: linear-gradient(to bottom, #004a7f 0%,#002e50 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#004a7f', endColorstr='#002e50',GradientType=0 );
+    box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.15), inset 0 1px 0 0 rgba(255,255,255,0.25), 0 1px 1px 0 rgba(0,0,0,0.25);
+    border: 1px solid #000;
+    height: 76px;
+    margin: 0px;
+    padding-top: 24px;
+}
+
+.op-logo {
+    background: url("lib/images/logo-optimizepress.png");
+    height: 50px;
+    width: 271px;
+    float: left;
+}
+
+.button {
+    background: #208000;
+    background: linear-gradient(to bottom, #269800 0%,#228a00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#269800', endColorstr='#228a00',GradientType=0 );
+    box-shadow: inset 0 0 -1px 0 rgba(255,255,255,0.15), inset 0 1px 0 0 rgba(255,255,255,0.15), 0 1px 0 0 rgba(0,0,0,0.15);
+    border: 1px solid #000;
+    border-radius: 3px;
+    height: auto;
+    width: auto;
+    padding: 16px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 1px #000, 0 0 1px #000, 0 1px 1px #000;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center !important;
+    margin: 0 auto;
+}
+
+h1.title {
+    display: inline-block;
+    box-shadow: 0 0 0 10px #fff;
+    background-color: #fff;
+    position: relative;
+    top: 50px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 12px;
+}
+
+.steps {
+    clear: both;
+    height: 100%;
+    width: 560px;
+    margin-top: 36px;
+    padding: 50px;
+    padding-top: 34px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.steps h1 {
+    height: 35px;
+    width: 42px;
+    border: 4px solid #000;
+    border-radius: 50px;
+    padding-top: 7px;
+    margin-top: 25px;
+}
+
+.steps h2 {
+    margin-top: 15px;
+}
+
+.steps p {
+    margin: 15px 0 0 0;
+}
+
+.steps li {
+    opacity: 0.50;
+    filter: alpha(opacity=50);
+    zoom: 1;
+}
+
+.steps li.completed {
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+    zoom: 1;
+}
+
+.help a {
+    float: left;
+    display: block;
+    height: 73px;
+    width: 178px;
+    padding: 27px 25px 0 115px;
+    margin: 25px 0 50px 0;
+    background-color: #f2f2f2 !important;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 0 #fff;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+    text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+    line-height: 22px;
+}
+
+.help a.support {
+    background: url("lib/images/help-support.png") left center no-repeat;
+    margin-right: 20px;
+}
+
+.help a.members {
+    background: url("lib/images/help-members.png") left center no-repeat;
+}
+
+.help a:hover {
+    color: #004a80;
+}
+
+.help a:active,
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+#footer {
+    position: relative;
+    margin-top: -50px;
+    padding-top: 20px;
+    clear: both;
+    border-top: 1px solid #ccc;
+    background: #f2f2f2;
+    height: 30px;
+    color: #999;
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.05);
+    font-weight: bold;
+}
+
+#wrapper {
+    min-height: 100%;
+}
+
+#content {
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+/* Responsive Code */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 480px;
+    }
+
+    #header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .op-logo {
+        background: url("lib/images/logo-optimizepress-icon.png");
+        height: 50px;
+        width: 50px;
+    }
+
+    .button {
+        margin-right: 50px;
+    }
+
+    .steps {
+        width: 330px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .steps p {
+        line-height: 18px;
+    }
+
+    .help {
+        padding: 0 25px;
+    }
+
+    .help li:last-of-type a {
+        margin-bottom: 50px;
+    }
+
+    .help a {
+        width: 290px;
+        padding: 27px 25px 0 115px;
+        margin: 25px 0 0 0;
+    }
+
+    .help a.support {
+        margin-right: 0px;
+    }
+
+}

@@ -1,0 +1,1 @@
+<?php op_theme_file('footer') ?>
