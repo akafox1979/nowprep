@@ -61,7 +61,7 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
         <meta property="og:image:width" content="1500"/>
         <meta property="og:image:height" content="1500"/>
-    <?php } else if ($post->ID == 3683 || $post->ID == 3719 || $post->ID == 3794 || $post->ID == 3731 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3833 || $post->ID == 3836 || $post->ID == 3945 || $post->ID == 3948 || $post->ID == 3951) { ?>
+    <?php } else if ($post->ID == 3683 || $post->ID == 3719 || $post->ID == 3794 || $post->ID == 3731 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3833 || $post->ID == 3836 || $post->ID == 3945 || $post->ID == 3948 || $post->ID == 3951 || $post->ID == 4047) { ?>
         <title>ReadyPower Emergency Radio</title>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="<?php echo "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>"/>
@@ -768,7 +768,7 @@ if ($app->cfgCon("vp389")) {
     ?>
 </div><!-- container -->
 <script type="text/javascript" src="https://vp389.infusionsoft.com/app/webTracking/getTrackingCode"></script>
-<?php if (is_page("ready-vault") || is_page("order-info") || is_page("ready-vault/thank-you") || $post->ID == 2826 || $post->ID == 2873 || $post->ID == 2808 || $post->ID == 3255 || $post->ID == 3326 || $post->ID == 3329 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3399 || $post->ID == 3472 || $post->ID == 3540 || $post->ID == 3623 || $post->ID == 3683 || $post->ID == 3684 || $post->ID == 3719 || $post->ID == 3723 || $post->ID == 3731 || $post->ID == 3769 || $post->ID == 3750 || $post->ID == 3794 || $post->ID == 3833 || $post->ID == 3840 || $post->ID == 3836 || $post->ID == 3899 || $post->ID == 3959 || $post->ID == 3954 || $post->ID == 3945 || $post->ID == 3985 || $post->ID == 3975 || $post->ID == 3948 || $post->ID == 3997 || $post->ID == 3951) { ?>
+<?php if (is_page("ready-vault") || is_page("order-info") || is_page("ready-vault/thank-you") || $post->ID == 2826 || $post->ID == 2873 || $post->ID == 2808 || $post->ID == 3255 || $post->ID == 3326 || $post->ID == 3329 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3399 || $post->ID == 3472 || $post->ID == 3540 || $post->ID == 3623 || $post->ID == 3683 || $post->ID == 3684 || $post->ID == 3719 || $post->ID == 3723 || $post->ID == 3731 || $post->ID == 3769 || $post->ID == 3750 || $post->ID == 3794 || $post->ID == 3833 || $post->ID == 3840 || $post->ID == 3836 || $post->ID == 3899 || $post->ID == 3959 || $post->ID == 3954 || $post->ID == 3945 || $post->ID == 3985 || $post->ID == 3975 || $post->ID == 3948 || $post->ID == 3997 || $post->ID == 3951 || $post->ID == 4047) { ?>
     <script src="https://start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_base_all.js?ver=<?php echo time(); ?>"></script>
 <?php } else if (is_page("ice-wizard-v3") || is_page("shipping-info-v3") || is_page("payment-info-v3")) { ?>
     <script src="https://start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_icecard_short_funnel_ajax.js?ver=<?php echo time(); ?>"></script>

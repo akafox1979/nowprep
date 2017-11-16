@@ -116,7 +116,7 @@
             //	redirect_url = "https://start.nowprep.com/ready-vault/order-info/";
             //}
 
-            $.redirectPost(redirect_url + window.location.search,
+            $.redirectPost(redirect_url,
                 {
                     productLander: "1",
                     infuProductID: productData["infuProductID"],
@@ -1029,6 +1029,7 @@ debugger;
                     if (window.location.href.indexOf("/ready-power-discount") > 0) {
                         newOrderDiscount = true;
                     } else if (
+                                window.location.href.indexOf("/ready-power/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
                                 window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
