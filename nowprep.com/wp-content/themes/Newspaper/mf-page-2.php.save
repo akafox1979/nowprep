@@ -1,0 +1,635 @@
+kkkkkkkkkkkkkkkkkkkkkkkkkkK
+<?php
+/**
+ * Template Name: Emergency Contact Card page template
+ */
+
+if(isset($_SERVER['HTTP_CF_VISITOR'])) {
+    if(strpos($_SERVER['HTTP_CF_VISITOR'], 'https') === false) {
+        wp_redirect('https://nowprep.com/emergency-contact-card/');
+        exit();
+    }
+}
+?>
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320, user-scalable=no">
+    <title>NowPrep</title>
+    <link rel="stylesheet" href="assets/ecc/css/custom.css">
+    <link rel="stylesheet" href="assets/ecc/css/bootstrap.css">
+    <script src="assets/ecc/js/jquery.min.js"></script>
+    <script src="assets/ecc/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="wrapper index">
+    <section id="logosec">
+        <div class="container">
+            <div class="row"> <img src="images/nowprep-logo.png" class="logo img-responsive"> </div>
+        </div>
+    </section>
+    <section id="as-seen-on-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="asseenlogosec">
+                        <div class="asseen-text">As Seen On:</div>
+                        <div class="asseen-logos"><img src="images/cnbc-logo.png"><img src="images/abc-logo.png"><img src="images/msn-logo.png"><img src="images/cnn-logo.png"><img src="images/wsj-logo.png"><img src="images/ocbs-logo.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cardsec-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2><span>100% FREE</span> Emergency Contact Card is a Life Saver!</h2>
+                </div>
+                <div class="col-xs-12"><img src="images/widewhitereflective.png" class="v-card img-responsive"> </div>
+                <div class="col-xs-12"><img src="images/arrow.png" class="v-card-arrow img-responsive"></div>
+            </div>
+        </div>
+    </section>
+    <section id="form-sec-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form method="post" action="contact.html">
+                        <div class="creatingcard">
+                            <h4>To begin creating YOUR card, just enter your name and email below</h4>
+                        </div>
+                        <div class="input-group">
+                            <input id="name" type="text" class="form-control" name="name" placeholder="Enter Your Full Name">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> </div>
+                        <div class="input-group">
+                            <input id="email" type="email" class="form-control" name="email" placeholder="Enter Your Email Address">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span> </div>
+                        <button type="submit" class="btn-primary btn-lg btn-block">YES! Download My FREE Emergency Card INSTANTLY!</button>
+                        <p class="locksec"><i class="glyphicon glyphicon-lock"></i> We respect your privacy</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="getstarted-sec">
+        <div class="container most-important-sec">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>60 Seconds out of your day could be the single <em>most important</em> thing you do this year... Don't put this off. </h3>
+                    <h3><span>Get Started Now!</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul>
+                        <li><strong>Protect your loved ones</strong> and yourself with this simple tool.</li>
+                        <li><strong>Easy to use wizard</strong> will have you better prepared in <em>less than 60 seconds</em>.</li>
+                        <li><strong>Keep for yourself</strong> OR simply share with your spouse, children, and other family or friends.</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12">
+                    <div class="money-bag-sec">
+                        <img src="images/money-bag.jpg" class="img-responsive">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                    </div>
+                    <div class="money-bag-sec">
+                        <img src="images/childandpa.png" class="img-responsive">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.</p>
+                    </div>
+                </div>
+                <div class="col-xs-12"><img src="images/arrow.png" class="v-card-arrow arrw img-responsive"></div>
+            </div>
+        </div>
+    </section>
+    <section id="form-sec-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form method="post" action="contact.html">
+                        <div class="creatingcard">
+                            <h4>To begin creating YOUR card, just enter your name and email below</h4>
+                        </div>
+                        <div class="input-group">
+                            <input id="name" type="text" class="form-control" name="name" placeholder="Enter Your Full Name">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> </div>
+                        <div class="input-group">
+                            <input id="email" type="email" class="form-control" name="email" placeholder="Enter Your Email Address">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span> </div>
+                        <button type="submit" class="btn-primary btn-lg btn-block">YES! Download My FREE Emergency Card INSTANTLY!</button>
+                        <p class="locksec"><i class="glyphicon glyphicon-lock"></i> We respect your privacy</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="customers-say">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>What Our <span>Users</span> Say:</h2>
+                </div>
+                <div class="testmonialsec">
+                    <div class="col-xs-12">
+                        <!-- Testmonial one by one -->
+                        <div class="image-with-text">
+                            <div class="man-img"><img src="images/Richard.jpg" class="img-responsive"></div>
+                            <div class="man-text">
+                                <p class="destion">“It’s simple, free, and even if you don't want to think about it...it’s good to be ready for the worst.”</p>
+                                <p class="name-man">- Richard C. <span class="likebtn"><a href="#"><img src="images/likebtn.png" class="img-responsive"></a></span></p>
+                            </div>
+                        </div>
+                        <!-- Testmonial End -->
+                        <!-- Testmonial one by one -->
+                        <div class="image-with-text">
+                            <div class="man-img"><img src="images/David.jpg" class="img-responsive"></div>
+                            <div class="man-text">
+                                <p class="destion">"I gave one of these cards to my daughter with me and my wife's contact information. It feels good to know she has a physical copy of our information if god forbid anything were to happen."</p>
+                                <p class="name-man">- David N. <span class="likebtn"><a href="#"><img src="images/likebtn.png" class="img-responsive"></a></span></p>
+                            </div>
+                        </div>
+                        <!-- Testmonial End -->
+                        <!-- Testmonial one by one -->
+                        <div class="image-with-text">
+                            <div class="man-img"><img src="images/Barbara.jpg" class="img-responsive"></div>
+                            <div class="man-text">
+                                <p class="destion">"It's a good idea, it's FREE, and it could be life saving. There is literally not a single good reason not to prepare for the unexpected."</p>
+                                <p class="name-man">- Barbara M. <span class="likebtn"><a href="#"><img src="images/likebtn.png" class="img-responsive"></a></span></p>
+                            </div>
+                        </div>
+                        <!-- Testmonial End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="link-footer"><a href="#">About Us</a> | <a href="#">Contact Us</a> </p>
+                    <p class="copyright">Copyright © 2017 NowPrep.com. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="wrapper contact">
+    <section id="logosec">
+        <div class="container">
+            <div class="row"> <img src="images/nowprep-logo.png" class="logo img-responsive"> </div>
+        </div>
+    </section>
+    <section id="cardsec-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Enter The Contact Info for The <span>Primary Emergency Contact</span> You Want Printed on Card:</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="emergency-contact-form">
+        <form id="contact_form" method="post" action="generate.html">
+            <div class="container ec-formsec">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-logo-textsec">
+                            <div class="form-logo-pmsec"><img src="images/form-logo.png" class="img-responsive"></div>
+                            <div class="form-text-pmsec">
+                                <h3>Emergency Contact #1</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-textsec">
+                            <h3>In Case of Emergency, Please Contact...</h3>
+                            <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Enter Your Primary Contact’s Full Name*">
+                            </div>
+                            <div class="input-group phonenumber"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="input-group phonenumber-alt"> <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                <input id="address" type="text" class="form-control" name="address" placeholder="Address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info btn-lg">NEXT <i class="glyphicon glyphicon-forward"></i></button>
+        </form>
+    </section>
+    <section id="cardsec-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h5>-OR-</h5>
+                    <h4>Add <em>OPTIONAL</em></h4>
+                    <h2 class="secondry"><span>Secondary Emergency Contact</span> You Want Printed on Card:</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="emergency-contact-form">
+        <form method="post" action="generate.html">
+            <div class="container ec-formsec">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-logo-textsec">
+                            <div class="form-logo-pmsec"><img src="images/form-logo.png" class="img-responsive"></div>
+                            <div class="form-text-pmsec">
+                                <h3>Emergency Contact #2</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-textsec">
+                            <h3>In Case of Emergency, Please Contact...</h3>
+                            <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Enter Your Secondary Contact’s Full Name*">
+                            </div>
+                            <div class="input-group phonenumber"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="input-group phonenumber-alt"> <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                <input id="address" type="text" class="form-control" name="address" placeholder="Address">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info btn-lg">NEXT <i class="glyphicon glyphicon-forward"></i></button>
+        </form>
+    </section>
+    <section id="cardsec-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"> <img src="images/visiting-card.png" class="v-card img-responsive"> </div>
+            </div>
+        </div>
+        <br/>
+    </section>
+    <section id="gray-footer-logo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="asseenlogosec">
+                        <div class="asseen-text">As Seen On:</div>
+                        <div class="asseen-logos"><img src="images/cnbc.png"><img src="images/abc.png"><img src="images/msn.png"><img src="images/cnn.png"><img src="images/wsj.png"><img src="images/ocbs.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="link-footer"><a href="#">About Us</a> | <a href="#">Contact Us</a> </p>
+                    <p class="copyright">Copyright © 2017 NowPrep.com. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="wrapper generate">
+    <section id="logosec">
+        <div class="container">
+            <div class="row"> <img src="images/nowprep-logo.png" class="logo img-responsive"> </div>
+        </div>
+    </section>
+    <section id="progress-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div style="min-height:300px;">
+                        <div class="dummy_div" style="width:100%; padding-bottom:16%"> </div>
+                        <div class="modal_load">
+                            <div class="progress" role="progressbar">
+                                <div class="progress__meter" id="pbar">
+                                    <span class="progress__label" id="pbar_span">0%</span>
+                                </div>
+                            </div>
+                            <div class="loading_content">
+                                <p>Checking your details......</p>
+                                <p>Getting your card ready......</p>
+                                <p></p>
+                                <p class="generating_certificate">Congratulations!</p>
+                                <div id="dwnc" style="display:none"> <a class="step_button steppad step_button_1 next" href="download.html">Download Your Card <i class="glyphicon glyphicon-forward"></i></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </section>
+    <section id="gray-footer-logo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="asseenlogosec">
+                        <div class="asseen-text">As Seen On:</div>
+                        <div class="asseen-logos"><img src="images/cnbc.png"><img src="images/abc.png"><img src="images/msn.png"><img src="images/cnn.png"><img src="images/wsj.png"><img src="images/ocbs.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="link-footer"><a href="#">About Us</a> | <a href="#">Contact Us</a> </p>
+                    <p class="copyright">Copyright © 2017 NowPrep.com. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="wrapper download">
+    <section id="logosec">
+        <div class="container">
+            <div class="row"> <img src="images/nowprep-logo.png" class="logo img-responsive"> </div>
+        </div>
+    </section>
+    <div class="gap" style="padding-bottom:2%;"></div>
+    </section>
+    <section id="emergency-contact-form">
+        <form method="post" action="sales.html">
+            <div class="container ec-formsec">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-logo-textsec">
+                            <div class="form-logo-pmsec"><img src="images/form-logo.png" class="img-responsive"></div>
+                            <div class="form-text-pmsec">
+                                <h3>Download Card</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-textsec">
+                            <div class="nameful"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><strong>Full Name</strong><span class="nameborder">Kimberly Wilson</span></div>
+                            <div class="nameful"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><strong>Email</strong><span class="mailborder">kimmykim88@hotmail.com</span></div>
+                            <div class="pri-datasec">
+                                <h3>Primary Emergency Details</h3>
+                                <div class="nameful"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><strong>Full Name</strong><span class="nameborder">Kimberly Wilson</span></div>
+                                <div class="nameful"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><strong>Email</strong><span class="mailborder">kimmykim88@hotmail.com</span></div>
+                                <div class="nameful">
+                                    <div class="nameful2"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><strong>Phone</strong><span class="mainphone">512-555-0108</span></div>
+                                </div>
+                                <div class="nameful"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><strong>Address</strong><span class="homeaddress">115 Brentwood Drive, Austin, TX 78753</span></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="pri-datasec">
+                                <h3>Secondary Emergency Details</h3>
+                                <div class="nameful"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><strong>Full Name</strong><span class="nameborder">Kimberly Wilson</span></div>
+                                <div class="nameful"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><strong>Email</strong><span class="mailborder">kimmykim88@hotmail.com</span></div>
+                                <div class="nameful">
+                                    <div class="nameful2"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><strong>Phone</strong><span class="mainphone">512-555-0108</span></div>
+                                </div>
+                                <div class="nameful"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><strong>Address</strong><span class="homeaddress">115 Brentwood Drive, Austin, TX 78753</span></div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-info btn-lg downlord">DOWNLOAD INSTANTLY <i class="glyphicon glyphicon-download"></i></button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="link-footer"><a href="#">About Us</a> | <a href="#">Contact Us</a> </p>
+                    <p class="copyright">Copyright © 2017 NowPrep.com. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="wrapper sales">
+    <section id="logosec">
+        <div class="container">
+            <div class="row"> <img src="images/nowprep-logo.png" class="logo img-responsive"> </div>
+        </div>
+    </section>
+    <section id="sales-sec2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Now take advantage of a <em>Limited Time Offer</em> to get our <strong>Emergency Contact Card Premium Package</strong>! It’s a simple & affordable way to better prepare.</p>
+                    <a href="#shipping-details" class="complete-order-btn">COMPLETE ORDER</a> </div>
+            </div>
+        </div>
+    </section>
+    <section id="sales-sec3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>This <span>Premium Package</span> Includes:</h3>
+                    <ul>
+                        <li>2x Waterproof <strong>Wallet-Size Cards</strong></li>
+                        <li><em>Easy-to-Follow</em> Disaster Planning Guide</li>
+                        <li>In-Depth <strong>Emergency Contacts Log</strong></li>
+                        <li><strong>BONUS</strong> Life-Saving First-Aid Tips!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid sales-mid-img">
+            <div class="row">
+                <div class="col-xs-12"> <img src="images/happy_family.jpg" class="img-responsive"> </div>
+            </div>
+        </div>
+    </section>
+    <section id="sales-sec4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12"> <a href="#shipping-details" class="complete-order-btn">COMPLETE ORDER</a>
+                    <p class="sec4text">With our reliance on technology at an all-time high, most individuals are completely unprepared when their phones break. This simple solution allows you to keep a physical record of your most vital info.</p>
+                    <p class="sec4text">Together, we can make safety and preparation a reality!</p>
+                    <a href="#shipping-details" class="complete-order-btn">COMPLETE ORDER</a> </div>
+            </div>
+        </div>
+    </section>
+    <section id="order-sec1">
+        <form id="order" method="post" action="upsell.html">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12"><img src="images/cardlogo.png" class="img-responsive"></div>
+                    <div id="shipping-details" class="col-xs-12">
+                        <h2>Step 1: Shipping Details</h2>
+                        <div class="step1-form">
+                            <div class="input-group">
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Full Name*">
+                            </div>
+                            <div class="input-group emailfild">
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="input-group phonenumber">
+                                <input id="phone" type="number" class="form-control" name="phone" placeholder="Phone Number">
+                            </div>
+                            <div class="input-group">
+                                <input id="address" type="text" class="form-control" name="address" placeholder="Street&nbsp;Address*
+">
+                            </div>
+                            <div class="input-group">
+                                <input id="address2" type="text" class="form-control" name="address2" placeholder="Street&nbsp;Address&nbsp;(Second&nbsp;Line)">
+                            </div>
+                            <div class="input-group city">
+                                <input id="city" type="text" class="form-control" name="city" placeholder="City">
+                            </div>
+                            <div class="input-group state">
+                                <input id="state" type="text" class="form-control" name="state" placeholder="State">
+                            </div>
+                            <div class="input-group zipcode">
+                                <input id="zipcode" type="number" class="form-control" name="zipcode" placeholder="Zip&nbsp;Code">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h2>Step 2: Payment Information</h2>
+                        <div class="step1-form">
+                            <div class="input-group">
+                                <input id="cardnumber" type="number" class="form-control" name="cardnumber" placeholder="Credit&nbsp;Card&nbsp;Number">
+                            </div>
+                            <div class="input-group ex-date">
+                                <input id="ex-date" type="number" class="form-control" name="ex-date" placeholder="Expiration&nbsp;Date">
+                            </div>
+                            <div class="input-group cvv">
+                                <input id="cvv" type="number" class="form-control" name="cvv" placeholder="CVV">
+                            </div>
+                            <button type="submit" class="sales-btn btn-info btn-lg"> Yes, Rush Me My Cards & Premium Package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="link-footer"><a href="#">About Us</a> | <a href="#">Contact Us</a> </p>
+                    <p class="copyright">Copyright © 2017 NowPrep.com. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="wrapper upsell">
+    <section id="logosec">
+        <div class="container">
+            <div class="row"> <img src="images/nowprep-logo.png" class="logo img-responsive"> </div>
+        </div>
+    </section>
+    <section id="cardsec-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>What is <span>Lorem Ipsum? </span> </h2>
+                    <p class="upsl-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                    <p class="upsl-p">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+                <div class="col-xs-12"> <img src="images/upsal-bg.jpg" class="upslimg img-responsive"> </div>
+                <div class="col-xs-12"> <p class="pricesec"><span></span>$75</p></div>
+                <form method="post" action="generate.html">
+                    <button type="submit" class="btn-info btn-lg">SEND ME MY PREMIUM PREP BINDER <i class="glyphicon glyphicon-forward"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="gray-footer-logo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="asseenlogosec">
+                        <div class="asseen-text">As Seen On:</div>
+                        <div class="asseen-logos"><img src="images/cnbc.png"><img src="images/abc.png"><img src="images/msn.png"><img src="images/cnn.png"><img src="images/wsj.png"><img src="images/ocbs.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="link-footer"><a href="#">About Us</a> | <a href="#">Contact Us</a> </p>
+                    <p class="copyright">Copyright © 2017 NowPrep.com. All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="assets/ecc/js/progressbar.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".progress").asProgress({
+            namespace: 'progress',
+            speed: 100, // refresh speed
+            delay: 100
+        });
+        $('.progress').asProgress('start');
+        var loading_content = $('.loading_content').find('p');
+        var loading_content_length = loading_content.length - 1;
+        var i = 0;
+        var timer = setTimeout(function run() {
+            if(i <= loading_content_length) {
+                var prev = i - 1;
+                var next = i + 1;
+                if(i >= 0 && i < 2) {
+                    if ( i > 0) {
+                        loading_content.eq(prev).removeClass('loading').addClass('completed');
+                    }
+                    loading_content.eq(i).addClass('loading');
+                    var timer1 = setTimeout(run, 5000);
+                }
+                if( i === 2) {
+                    loading_content.eq(prev).removeClass('loading').addClass('completed');
+                    setTimeout(function() {
+                        loading_content.eq(2).addClass('completed_without_checkbox').show();
+                        loading_content.eq(3).addClass('loading').show();
+                        $('.progress').asProgress('reset');
+                        $(".progress").asProgress("start");
+                        var timer1 = setTimeout(run, 10000);
+                    }, 1000);
+                }
+                if ( i === 3) {
+                    loading_content.eq(i).removeClass('loading').addClass('completed');
+                }
+                i += 1;
+            }
+        }, 0);
+    });
+</script>
+<script>
+    var chk_progress=setInterval(function () {
+        var currentWidth = $('#pbar_span').text();
+        var number = parseInt(currentWidth);
+        if(number>=100 && !$('.generating_certificate').is(':hidden')) {$("#dwnc").fadeIn(); }
+    }, 1000);
+</script>
+</body>
+</html>
