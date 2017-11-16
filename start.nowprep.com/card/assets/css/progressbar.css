@@ -1,0 +1,354 @@
+
+.loading_content p.completed:before {
+    content: "\f00c";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.loading_content p.loading:before {
+    content: "\f110";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+    position: relative;
+    top: -1px;
+}
+.modal_load .progress {
+    height: 30px !important;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	}
+/* PROGRESS BAR WIDTH */
+#progress_bar_outer {
+    max-width: 1000px;  /* REMOVE THIS LINE IF YOU WANT TO A FULL WIDTH PROGRESS BAR. INITIALL IT IS 1000PX */
+    min-height: 80px;
+    position: relative;
+    margin: 0 auto
+}
+#progress_bar_outer .progress_loader {
+    height: 60px;
+    padding: 12px 0
+}
+#progress_bar_outer .progress_loader .progressbar_top_text {
+    padding-bottom: 16px
+}
+/*======= PROGRESS BAR TEXT APPEARENCE ===== */
+#progress_bar_outer .progress_loader #progress_text {
+    font-weight: 700;
+    font-size: 16px;
+    float: left;
+    color: green;  /* CHANGE COLOR OR TEXT */
+   /*  text-shadow: 0 2px 2px rgba(0, 0, 0, .5); /* REMOVE THIS PROPERTY IF YOU DONT WANT A TEXT SHAOW */
+}
+@media (max-width: 480px) {
+    #progress_bar_outer .progress_loader #progress_text {
+        padding-left: 0
+    }
+}
+/*======= PROGRESS BAR PERCENTAGE TEXT APPEARENCE COLOR ===== */
+#progress_bar_outer .progress_loader .percent_progress {
+    font-size: 15px;
+    float: right;
+    padding-right: 20px;
+    color: #e32726;  /* CHANGE COLOR OR TEXT */
+    font-weight: 700;
+    /*text-shadow: 0 2px 2px rgba(0, 0, 0, .5); /* REMOVE THIS PROPERTY IF YOU DONT WANT A TEXT SHAOW */
+}
+@media (max-width: 480px) {
+    #progress_bar_outer .progress_loader .percent_progress {
+        padding-right: 0
+    }
+}
+#progress_bar_outer .progress_loader #progressbar_process {
+    background-color: #000;
+    height: 33px;
+    margin: 15px auto 0;
+    overflow: hidden;
+}
+/*============= PROGRESS BAR COLOR ====================*/
+.progress__meter {
+    background-color: #e32726;
+    height: 100%;
+    padding: 2% 4px;
+}
+span#pbar_span {
+    color: #fff;
+    float: right;
+}
+
+#progress_bar_outer label {
+    color: #fff;
+    display: block;
+    font: 700 10px Lato, Helvetica, Arial, sans-serif;
+    margin-bottom: 5px
+}
+
+#form_search{display:none;}
+
+
+
+#form_search-wrapper #form-search {
+    display: none;
+    margin-left: -1em;
+    margin-right: -1em;
+    *zoom: 1;
+    margin-bottom: .625em
+}
+#form_search-wrapper #form-search:after,
+#form_search-wrapper #form-search:before {
+    content: " ";
+    display: table;
+    line-height: 0
+}
+#form_search-wrapper #form-search:after {
+    clear: both
+}
+#form_search-wrapper .control-group {
+    position: relative
+}
+@media (max-width: 42.75em) {
+    #form_search-wrapper .control-group {
+        margin-bottom: 1.25em
+    }
+}
+#form_search-wrapper label {
+    color: #fff;
+    display: block;
+    font: 700 .875em Lato, Helvetica, Arial, sans-serif;
+    margin-bottom: .3571em
+}
+#form_search-wrapper #cg--form-search--first_name,
+#form_search-wrapper #cg--form-search--last_name {
+    min-height: 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+    *padding: 0;
+    box-sizing: border-box
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--first_name,
+    #form_search-wrapper #cg--form-search--last_name {
+        float: left;
+        width: 25%
+    }
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--first_name,
+    #form_search-wrapper #cg--form-search--last_name {
+        padding-left: .3125em;
+        padding-right: .3125em
+    }
+    #form_search-wrapper #cg--form-search--first_name:first-child,
+    #form_search-wrapper #cg--form-search--last_name:first-child {
+        padding-left: 1em
+    }
+}
+#form_search-wrapper #cg--form-search--state {
+    min-height: 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+    *padding: 0;
+    box-sizing: border-box
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--state {
+        float: left;
+        width: 18.75%
+    }
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--state {
+        padding-left: .3125em;
+        padding-right: .3125em
+    }
+}
+#form_search-wrapper #cg--form-search--yourself {
+    min-height: 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+    *padding: 0;
+    box-sizing: border-box;
+    position: relative
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--yourself {
+        float: left;
+        width: 12.5%
+    }
+}
+#form_search-wrapper #cg--form-search--yourself aside {
+    display: none
+}
+#form_search-wrapper #cg--form-search--yourself input[type=checkbox] {
+		display: none;
+    }
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--yourself {
+        padding-right: 0;
+        top: 2.3125em
+    }
+    #form_search-wrapper #cg--form-search--yourself input[type=checkbox] {
+        margin-left: .625em
+		display: none;
+    }
+    #form_search-wrapper #cg--form-search--yourself input[type=checkbox]+label {
+        display: inline\9;
+        padding-left: 10px;
+    }
+    #form_search-wrapper #cg--form-search--yourself aside {
+        display: block;
+        *display: none;
+        display: none\9;
+        position: absolute;
+        top: 100%;
+        opacity: 0;
+        background: #338bba;
+        border-radius: .1875em;
+        color: #fff;
+        padding: .5em .875em;
+        box-shadow: 0 .0625em .1875em 0 #3e3e3e;
+        transition: opacity .4s
+    }
+    #form_search-wrapper #cg--form-search--yourself aside:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -.3125em;
+        height: 0;
+        width: 0;
+        border: .3125em solid transparent;
+        border-bottom-color: #338bba
+    }
+    #form_search-wrapper #cg--form-search--yourself:hover aside {
+        *display: block;
+        display: block\9;
+        *left: 0;
+        left: 0\9;
+        opacity: 1
+    }
+}
+@media (max-width: 42.75em) {
+    #form_search-wrapper #cg--form-search--yourself {
+        text-align: center
+    }
+    #form_search-wrapper #cg--form-search--yourself label {
+        display: inline-block;
+        width: auto
+    }
+}
+#form_search-wrapper #cg--form-search--submit_btn {
+    min-height: 1px;
+    padding-left: 1em;
+    padding-right: 1em;
+    *padding: 0;
+    box-sizing: border-box;
+    position: relative
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--submit_btn {
+        float: left;
+        width: 18.75%
+    }
+}
+@media (min-width: 43.75em) {
+    #form_search-wrapper #cg--form-search--submit_btn {
+        top: 1.25em;
+        *width: 3.125em
+    }
+}
+#form_search-wrapper #cg--form-search--submit_btn button {
+    width: 100%;
+    *width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    *padding: .8125em 1.25em
+}
+#form_search-wrapper #cg--form-search--submit_btn #millm-link {
+    position: relative;
+    text-align: center;
+    font-size: .6875;
+    text-decoration: underline;
+    top: 1.3636em
+}
+#form_search-wrapper .secure-form {
+    display: none;
+    clear: both;
+    font: 300 .75em Lato, Helvetica, Arial, sans-serif;
+    line-height: 1.8333em;
+    margin-bottom: 0;
+    color: #fff
+}
+#form_search-wrapper .secure-form i {
+    background-image: url(/funnel/assets/themes/genesis/img/icon-info@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    float: left;
+    height: 20px;
+    margin-right: .25em;
+    position: relative;
+    top: .16667em;
+    width: 20px;
+    z-index: 800;
+    *zoom: 1
+}
+input[type=password], input[type=email], input[type=number], input[type=text], select {
+    -webkit-appearance: none;
+    border-radius: .1875em;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5em;
+    padding: .3125em .9375em;
+    box-shadow: none;
+    border: 1px solid #a4a4a4;
+    background: #fff;
+    color: #3e3e3e;
+    font: 1.125em Lato,Helvetica,Arial,sans-serif;
+}
+
+input[type=checkbox]+label:before {
+    content: '';
+    display: block;
+    display: none\9;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    height: 21px;
+    width: 21px;
+    margin-right: 5px;
+    background: url(../image/checkbox-sprite.png) transparent left bottom no-repeat;
+}
+
+input[type=checkbox]:checked +label:before {
+    background-position: top center;
+}
+button {
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    background: #338bba;
+    font: 700 1em Lato,Helvetica,Arial,sans-serif;
+    padding: .815em 2.5em;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .2s;
+}
+
+@media (max-width: 480px){
+div#cg--form-search--yourself {
+    max-width: 131px;
+    margin: auto;
+}
+}
