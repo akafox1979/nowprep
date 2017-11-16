@@ -309,3 +309,4 @@ class OptimizePress_Blog_Seo_Module extends OptimizePress_Modules_Base {
         echo '<!-- OptimizePress SEO options end -->'."\n";
     }
 }
+

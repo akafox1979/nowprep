@@ -242,3 +242,4 @@ if ($app->cfgCon("vp389")) {
 } else {
     echo json_encode(array("result" => 0, "ErrorText" => "Could not connect to server."));
 }
+

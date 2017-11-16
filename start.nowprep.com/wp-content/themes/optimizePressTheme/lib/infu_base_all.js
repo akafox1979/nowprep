@@ -152,13 +152,13 @@
                 }
             }
         });
-        debugger;
+debugger;
 
-        /*
+/*
 
 
-         */
-        if (window.location.href.indexOf("ready-power-v7/shipping-info") > 0) {
+ */
+        if(window.location.href.indexOf("ready-power-v7/shipping-info") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
                 $("div.pay-over").remove();
@@ -262,13 +262,13 @@
                         if (responseJson.result == 1) {
 
                             var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                            $.redirectPost(redirect_url, {thx: 1, total: responseJson.total});
+                            $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             return true;
                         }
                     });
                 }
             });
-        } else if (window.location.href.indexOf("ready-power-v7/order-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v7/order-info") > 0) {
 
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
@@ -414,7 +414,7 @@
                 }
             });
 
-        } else if (window.location.href.indexOf("ready-power-v6/order-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v6/order-info") > 0) {
 
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
@@ -477,6 +477,7 @@
                 }
 
 
+
                 if (error == 1) {
                     $("div.pay-over").hide();
                     $(this).parents(".frm").find(".form_error").remove();
@@ -522,7 +523,7 @@
                 }
             });
 
-        } else if (window.location.href.indexOf("ready-power-v6/payment-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v6/payment-info") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
                 $("div.pay-over").remove();
@@ -542,6 +543,7 @@
                 var sExpirationYear = $(this).find('select[name="ExpirationYear"]').val();
                 var sCVV2 = $(this).find('input[name="CVV2"]').val();
                 var stpp = $(this).find('input[name="tpp"]').val();
+
 
 
                 if ($.trim(sCardNumber).length == 0) {
@@ -655,18 +657,18 @@
                         if (responseJson.result == 1) {
 
                             var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                            $.redirectPost(redirect_url, {thx: 1, total: responseJson.total});
+                            $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             return true;
                         }
                     });
                 }
             });
-        } else if (window.location.href.indexOf("ready-power-v3/payment-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v3/payment-info") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
-                $("div.pay-over").remove();
-                $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
-                $("div.pay-over").show();
+                    $("div.pay-over").remove();
+                    $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
+                    $("div.pay-over").show();
 
                 var msg = '';
                 var error = 0;
@@ -681,6 +683,7 @@
                 var sExpirationYear = $(this).find('select[name="ExpirationYear"]').val();
                 var sCVV2 = $(this).find('input[name="CVV2"]').val();
                 var stpp = $(this).find('input[name="tpp"]').val();
+
 
 
                 if ($.trim(sCardNumber).length == 0) {
@@ -769,13 +772,13 @@
                         if (responseJson.result == 1) {
 
                             var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                            $.redirectPost(redirect_url, {thx: 1, total: responseJson.total});
+                            $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             return true;
                         }
                     });
                 }
             });
-        } else if (window.location.href.indexOf("ready-power-v3/order-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v3/order-info") > 0) {
 
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
@@ -1026,10 +1029,10 @@
                     if (window.location.href.indexOf("/ready-power-discount") > 0) {
                         newOrderDiscount = true;
                     } else if (
-                        window.location.href.indexOf("/ready-power-v1/order-info/") > 0 ||
-                        window.location.href.indexOf("/ready-power-v2/order-info/") > 0 ||
-                        window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
-                        window.location.href.indexOf("ready-power-v5/order-info-v5") > 0) {
+                                window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
+                                window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
+                                window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
+                                window.location.href.indexOf("ready-power-v5/order-info-v5") > 0) {
                         newOrder1 = true;
                     } else if (window.location.href.indexOf("/order-info-v1") > 0 || window.location.href.indexOf("/order-info-v2") > 0) {
                         newOrder = true;
@@ -1171,7 +1174,7 @@
                             } else {
                                 redirect_url = "https://start.nowprep.com/ready-vault/thank-you/";
                             }
-                            $.redirectPost(redirect_url, {thx: 1, total: responseJson.total});
+                            $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             return true;
                         }
                     });
@@ -1184,3 +1187,4 @@
     });
 
 }(jQuery.noConflict()));
+
