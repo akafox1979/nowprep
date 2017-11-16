@@ -1,0 +1,181 @@
+/*
+@package Custom Error Log
+@subpackage CSS
+
+This filestyles the plugin's admin pages
+
+Clearfix
+*/
+
+.clearfix:before, .clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+/*
+Error Log Table
+*/
+
+h2.cel-title {
+	margin-top: 5px;
+	float: left;
+}
+
+#error-log {
+	clear: both;
+}
+	
+.cel-table {
+	width: 100%; 
+	text-align: left; 
+	font-size: 0.9em;
+	border-collapse: collapse;
+}	
+	
+.cel-table th {
+	background: #222;
+	color: #fff;
+	padding: 5px 0;
+	text-transform: uppercase;
+	font-weight: 400;
+}	
+	
+.cel-table td {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.cel-type-error {
+	width: 20px;
+	padding-left: 10px;
+	color: #dd3d36;
+}
+
+.cel-type-error:before {
+	font-family: "dashicons";
+	content: "\f159";
+}
+
+.cel-type-notice {
+	width: 20px;
+	padding-left: 10px;
+	color: #ffba00;
+}
+
+.cel-type-notice:before {
+	font-family: "dashicons";
+	content: "\f159";
+}
+	
+.cel-table .cel-date {
+	padding-left: 10px;
+	width: 90px;
+}	
+
+.cel-table .cel-time {
+	width: 100px;
+}	
+	
+.cel-table .cel-dark td {
+	background: #e6e6e6;
+}
+
+.cel-table .cel-new-log td {
+	background: #b9ed91;
+	-webkit-transition: background-color .7s ease-in-out;
+	-moz-transition: background-color .7s ease-in-out;
+	-o-transition: background-color .7s ease-in-out;
+	-ms-transition: background-color .7s ease-in-out;
+	transition: background-color .7s ease-in-out;
+}
+
+.cel-log-filter,
+.cel-log-unfilter {
+	cursor: pointer;
+}
+
+.cel-table .cel-delete-button {
+	display: block;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: none;
+	outline: none;
+	padding: 0;
+	margin: 3px 0 0 0;
+	background: none;
+	font-size: 1.5em;
+	line-height: 1;
+	cursor: pointer;
+	color: #222;
+	text-decoration: none;
+}
+
+.cel-table .cel-delete {
+	width:20px;
+}
+
+.cel-table .cel-delete-button:hover {
+	color: #d54e21;
+}
+
+.cel-table .cel-delete-button:before {
+	font-family: "dashicons";
+	content: "\f153";
+}
+
+div.ajax-response {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	margin: 5px 0 15px !important;
+	display: block;
+	line-height: 19px;
+}
+
+a.cel-delete-all {
+	float: right;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+#cel-ab-toggle {
+	float: right;
+	margin-top: 22px;
+}
+
+#cel-ab-toggle label {
+	font-size: 0.9em;
+	color: #999;
+	margin-right: 5px;
+}
+
+/*
+Introduction
+*/
+
+pre {
+	background-color: #222;
+	color:#fff;
+	padding:15px;
+	margin-bottom: 30px;
+	display: block;
+	white-space: pre-wrap;
+}
+
+.pre-comment {
+	color: #666;
+}
+
+.default {
+	color: #999;
+}

@@ -1,0 +1,46 @@
+/*
+@package Custom Error Log
+@subpackage CSS
+
+The style for the admin bar menu icon
+*/
+
+#wp-admin-bar-error-log .cel-ab-section {
+	float: left;
+	padding-right: 7px;
+}
+
+#wp-admin-bar-error-log .cel-ab-section .ab-icon:before {
+	font-family: "dashicons";
+	content: "\f159";
+	font-size: 0.5em;
+	top: -3px;
+}
+
+#wp-admin-bar-error-log .cel-no-logs .ab-label {
+	color: #555 !important;
+}
+
+#wp-admin-bar-error-log #cel-ab-errors .ab-icon:before {
+	color: #dd3d36;
+}
+
+#wp-admin-bar-error-log #cel-ab-notices .ab-icon:before {
+	color: #ffba00;
+}
+
+#wp-admin-bar-error-log #cel-ab-errors.cel-no-logs .ab-icon:before {
+	color: #555;
+}
+
+#wp-admin-bar-error-log #cel-ab-notices.cel-no-logs .ab-icon:before {
+	color: #555;
+}
+
+.cel-ab-no-logs {
+	color: #555 !important;
+}
+
+.cel-ab-hidden {
+	display: none;
+}

@@ -1,0 +1,151 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Error Log\n"
+"POT-Creation-Date: 2014-10-23 14:30-0000\n"
+"PO-Revision-Date: 2014-10-23 14:30-0000\n"
+"Last-Translator: Dan Bahrami <dan.bahrami@googlemail.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/admin-bar.php:70 ../admin/log-table.php:57
+msgid "Errors"
+msgstr ""
+
+#: ../admin/admin.php:16 ../admin/admin.php:17 ../admin/admin.php:36
+msgid "Error Log"
+msgstr ""
+
+#: ../admin/admin.php:66
+msgid "Deleting"
+msgstr ""
+
+#: ../admin/introduction.php:13
+msgid ""
+"You haven't logged any errors yet. To log errors use the following function "
+"in your theme template files..."
+msgstr ""
+
+#: ../admin/introduction.php:19
+msgid ""
+"Errors and notices behave in exactly the same way but you can filter the "
+"error log to show only errors or only notices. Once you have logged an error "
+"or notice you can return to this page to see a log of all your errors and "
+"notices."
+msgstr ""
+
+#: ../admin/introduction.php:25
+msgid "Parameters"
+msgstr ""
+
+#: ../admin/introduction.php:29
+msgid "required"
+msgstr ""
+
+#: ../admin/introduction.php:31
+msgid "The error/notice message you want to log for internal use."
+msgstr ""
+
+#: ../admin/introduction.php:33
+msgid "Default"
+msgstr ""
+
+#: ../admin/introduction.php:39
+msgid "Sample Usage"
+msgstr ""
+
+#: ../admin/introduction.php:41
+msgid "Log an error"
+msgstr ""
+
+#: ../admin/introduction.php:43 ../admin/introduction.php:87
+msgid "There was an error with my theme"
+msgstr ""
+
+#: ../admin/introduction.php:45
+msgid "Use dynamic content to log an error"
+msgstr ""
+
+#: ../admin/introduction.php:47
+msgid "There was an error with"
+msgstr ""
+
+#: ../admin/introduction.php:47
+msgid "in my theme'"
+msgstr ""
+
+#: ../admin/introduction.php:50
+msgid "A real life example"
+msgstr ""
+
+#: ../admin/introduction.php:52
+msgid "error handling when creating a Wordpress user programatically"
+msgstr ""
+
+#: ../admin/introduction.php:78
+msgid "Make it theme ready"
+msgstr ""
+
+#: ../admin/introduction.php:80
+msgid ""
+"If you want to include the basic functions of custom error log in themes "
+"that will be used by other people make sure to check if the function exists "
+"first to avoid errors"
+msgstr ""
+
+#: ../admin/log-table.php:27
+msgid "Show in the admin bar"
+msgstr ""
+
+#: ../admin/log-table.php:51
+msgid "All"
+msgstr ""
+
+#: ../admin/log-table.php:63
+msgid "Notices"
+msgstr ""
+
+#: ../admin/log-table.php:69
+msgid "Clear Log"
+msgstr ""
+
+#: ../admin/log-table.php:79
+msgid "Date"
+msgstr ""
+
+#: ../admin/log-table.php:81
+msgid "Time"
+msgstr ""
+
+#: ../admin/log-table.php:83
+msgid "Message"
+msgstr ""
+
+#: ../includes/functions.php:140
+#, php-format
+msgid "%s %d has been successfully deleted"
+msgstr ""
+
+#: ../includes/functions.php:148
+#, php-format
+msgid "%s %d could not be deleted"
+msgstr ""
+
+#: ../includes/functions.php:188
+msgid "All errors have been deleted"
+msgstr ""
+
+#: ../includes/functions.php:196
+msgid "Errors could not be deleted"
+msgstr ""
+
+#: ../includes/functions.php:389
+msgid "No logs could be found"
+msgstr ""
