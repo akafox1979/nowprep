@@ -1,0 +1,34 @@
+/**
+  Custom code for small blocks modifications when editing the page with tdc composer
+*/
+
+
+// the vc_empty_space placeholder when editing
+
+
+.tdc-editing-vc_empty_space {
+  outline: 2px dotted #e8e8e8;
+
+  .tdc-editing-text {
+    position: absolute;
+    top:50%;
+    font-size: 14px;
+    margin-top: -11px;
+    width: 100%;
+
+    text-align: center;
+    color: #dddddd;
+  }
+}
+
+.tdc-element-selected {
+  .tdc-editing-vc_empty_space {
+    outline: none;
+  }
+}
+
+.tdc-editing-vc_single_image a {
+  width: 100%;
+  display: block;
+  background-size: cover;
+}
