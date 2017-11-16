@@ -280,7 +280,7 @@ function format_phone($phone_number)
 function subscribeContact($email_address, $fields)
 {
 
-    $api_key = '894834643d0181f91a7b5fae6e4f12a8-us16';
+    $api_key = '';
     $server = 'us16.';
     $list_id = 'a4306c905d';
     $auth = base64_encode('user:' . $api_key);
