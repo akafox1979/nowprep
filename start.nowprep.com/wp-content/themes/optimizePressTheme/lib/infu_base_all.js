@@ -118,14 +118,15 @@
 
             $.redirectPost(redirect_url,
                 {
-                    productLander: "1",
+                    productLander: "1"});
+            /*,
                     infuProductID: productData["infuProductID"],
                     infuProductPrice: productData["infuProductPrice"],
                     infuProductShippingPrice: productData["infuProductShippingPrice"],
                     infuProductImage: productData["infuProductImage"],
                     contactGoal: productData["contactGoal"],
                     paymentGoal: productData["paymentGoal"]
-                });
+                });*/
         });
 
         $("#billadd").on("change", function () {
@@ -414,7 +415,7 @@ debugger;
                 }
             });
 
-        } else if(window.location.href.indexOf("ready-power-v6/order-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v6/order-info") > 0 || window.location.href.indexOf("ready-power/order-info-v9") > 0) {
 
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
@@ -519,11 +520,14 @@ debugger;
                     fields["Email"] = $('input[name="Email"]').val();
                     debugger;
                     var redirect_url = "https://start.nowprep.com/ready-power-v6/payment-info/";
+                    if(window.location.href.indexOf("ready-power/order-info-v9") > 0) {
+                        redirect_url = "https://start.nowprep.com/ready-power/payment-info-v9/";
+                    }
                     $.redirectPost(redirect_url + window.location.search, fields);
                 }
             });
 
-        } else if(window.location.href.indexOf("ready-power-v6/payment-info") > 0) {
+        } else if(window.location.href.indexOf("ready-power-v6/payment-info") > 0 || window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
                 $("div.pay-over").remove();
