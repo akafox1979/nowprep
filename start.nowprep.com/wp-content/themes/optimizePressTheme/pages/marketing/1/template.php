@@ -1,5 +1,6 @@
 <?php
 global $post;
+//header( 'Cache-Control: max-age=604800' );
 $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
 ?><!DOCTYPE html>
 <!--[if lt IE 7 ]>
@@ -778,6 +779,14 @@ if ($app->cfgCon("vp389")) {
     <script src="https://start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_icecard_funnel_ajax.js?ver=<?php echo time(); ?>"></script>
 <?php }
 op_footer() ?>
+<?php
+if($post->ID == 4047) {?>
+        <link rel="stylesheet" type="text/css" href="<?php echo site_url()."/wp-content/themes/optimizePressTheme/ready-power.css";?>"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="<?php echo site_url()."/wp-content/themes/optimizePressTheme/ready-power.js?v=".time();?>"></script>
+    <?php }?>
 </body>
 </html>
-
