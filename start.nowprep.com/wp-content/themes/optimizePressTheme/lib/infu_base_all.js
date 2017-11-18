@@ -415,7 +415,7 @@ debugger;
                 }
             });
 
-        } else if(window.location.href.indexOf("ready-power-v6/order-info") > 0 || window.location.href.indexOf("ready-power/order-info-v9") > 0) {
+        } else if(window.location.href.indexOf("ready-power/order-info-v6") > 0 || window.location.href.indexOf("ready-power/order-info-v9") > 0) {
 
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
@@ -519,7 +519,7 @@ debugger;
                     fields["NameOnCard"] = $('input[name="NameOnCard"]').val();
                     fields["Email"] = $('input[name="Email"]').val();
                     debugger;
-                    var redirect_url = "https://start.nowprep.com/ready-power-v6/payment-info/";
+                    var redirect_url = "https://start.nowprep.com/ready-power/payment-info-v6/";
                     if(window.location.href.indexOf("ready-power/order-info-v9") > 0) {
                         redirect_url = "https://start.nowprep.com/ready-power/payment-info-v9/";
                     }
@@ -527,7 +527,7 @@ debugger;
                 }
             });
 
-        } else if(window.location.href.indexOf("ready-power-v6/payment-info") > 0 || window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
+        } else if(window.location.href.indexOf("ready-power/payment-info-v6") > 0 || window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
                 $("div.pay-over").remove();
@@ -1037,7 +1037,7 @@ debugger;
                                 window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
                                 window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
-                                window.location.href.indexOf("ready-power-v5/order-info-v5") > 0 ||
+                                window.location.href.indexOf("ready-power/order-info-v5") > 0 ||
                                 window.location.href.indexOf("ready-power-v8/order-info") > 0) {
                         newOrder1 = true;
                     } else if (window.location.href.indexOf("/order-info-v1") > 0 || window.location.href.indexOf("/order-info-v2") > 0) {
