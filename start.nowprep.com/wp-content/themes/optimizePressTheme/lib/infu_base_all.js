@@ -266,7 +266,7 @@ debugger;
                         //}
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            initPopup(msg);
+                            initPopup(responseJson.ErrorText);
                         }
                         if (responseJson.result == 1) {
 
@@ -660,7 +660,7 @@ debugger;
                         //}
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            initPopup(msg);
+                            initPopup(responseJson.ErrorText);
                         }
                         if (responseJson.result == 1) {
 
@@ -773,7 +773,7 @@ debugger;
                         //}
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            initPopup(msg);
+                            initPopup(responseJson.ErrorText);
                         }
                         if (responseJson.result == 1) {
 
@@ -1029,9 +1029,12 @@ debugger;
                     var newOrder = false;
                     var newOrder1 = false;
                     var newOrderDiscount = false;
+                    var newOrder2 = false;
 
                     if (window.location.href.indexOf("/ready-power-discount") > 0) {
                         newOrderDiscount = true;
+                    } else if(window.location.href.indexOf("ready-power/order-info-v10") > 0) {
+                        newOrder2 = true;
                     } else if (
                                 window.location.href.indexOf("/ready-power/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
@@ -1081,7 +1084,13 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n2")});
                                     }
                                 } else if ($(this).attr("id") == "quantity1") {
-                                    if (newOrderDiscount) {
+                                    if(newOrder2) {
+                                        fields.push({name: "infuProductID", value: 49});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_rpr1")
+                                        });
+                                    } else if (newOrderDiscount) {
                                         fields.push({name: "infuProductID", value: 47});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1167,7 +1176,7 @@ debugger;
                         var responseJson = $.parseJSON(response);
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            initPopup(msg);
+                            initPopup(responseJson.ErrorText);
                         }
                         if (responseJson.result == 1) {
 
