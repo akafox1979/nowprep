@@ -52,6 +52,16 @@
     }
 
     $(document).ready(function () {
+
+        function initPopup(msg) {
+            $('body').find(".popup_error").remove();
+            $('body').prepend('<div class="popup_error"><div class="form_error"><a class="close">x</a>Below fields are required:<ul>' + msg + '</ul></div></div>');
+            $('.popup_error,a.close').on('click', function() {
+                debugger;
+                $('.popup_error').remove();
+            });
+        }
+
         function phoneFormatter(elementID) {
             $('input[name="' + elementID + '"]').on('input', function () {
                 var number = $(this).val().replace(/[^\d]/g, '')
@@ -203,8 +213,7 @@ debugger;
 
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -257,8 +266,7 @@ debugger;
                         //}
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            $(".frm").find(".form_error").remove();
-                            $(".frm").prepend('<div class="form_error"><ul>' + responseJson.ErrorText + '</ul></div>');
+                            initPopup(msg);
                         }
                         if (responseJson.result == 1) {
 
@@ -342,8 +350,7 @@ debugger;
 
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -481,8 +488,7 @@ debugger;
 
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -582,8 +588,7 @@ debugger;
                 }
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -655,8 +660,7 @@ debugger;
                         //}
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            $(".frm").find(".form_error").remove();
-                            $(".frm").prepend('<div class="form_error"><ul>' + responseJson.ErrorText + '</ul></div>');
+                            initPopup(msg);
                         }
                         if (responseJson.result == 1) {
 
@@ -722,8 +726,7 @@ debugger;
                 }
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -770,8 +773,7 @@ debugger;
                         //}
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            $(".frm").find(".form_error").remove();
-                            $(".frm").prepend('<div class="form_error"><ul>' + responseJson.ErrorText + '</ul></div>');
+                            initPopup(msg);
                         }
                         if (responseJson.result == 1) {
 
@@ -844,8 +846,7 @@ debugger;
 
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -1021,8 +1022,7 @@ debugger;
                 }
                 if (error == 1) {
                     $("div.pay-over").hide();
-                    $(this).parents(".frm").find(".form_error").remove();
-                    $(this).parents(".frm").prepend('<div class="form_error">Below fields are required:<ul>' + msg + '</ul></div>');
+                    initPopup(msg);
                 } else {
                     debugger;
 
@@ -1167,8 +1167,7 @@ debugger;
                         var responseJson = $.parseJSON(response);
                         if (responseJson.result == 0) {
                             $("div.pay-over").hide();
-                            $(".frm").find(".form_error").remove();
-                            $(".frm").prepend('<div class="form_error"><ul>' + responseJson.ErrorText + '</ul></div>');
+                            initPopup(msg);
                         }
                         if (responseJson.result == 1) {
 
@@ -1193,3 +1192,4 @@ debugger;
     });
 
 }(jQuery.noConflict()));
+
