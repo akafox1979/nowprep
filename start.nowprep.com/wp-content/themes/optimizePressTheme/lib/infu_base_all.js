@@ -252,6 +252,8 @@ debugger;
                     fields.push({name: "utm_campaign", value: getQueryParameter("utm_campaign")});
                     fields.push({name: "utm_term", value: getQueryParameter("utm_term")});
                     fields.push({name: "utm_content", value: getQueryParameter("utm_content")});
+
+                    fields.push({name: "contactID", value: productData["contactID"]});
                     debugger;
                     $.ajax({
                         type: "POST",
@@ -416,9 +418,24 @@ debugger;
                     fields["Phone"] = $('input[name="Phone"]').val();
                     fields["NameOnCard"] = $('input[name="NameOnCard"]').val();
                     fields["Email"] = $('input[name="Email"]').val();
+
                     debugger;
-                    var redirect_url = "https://start.nowprep.com/ready-power-v7/shipping-info/";
-                    $.redirectPost(redirect_url + window.location.search, fields);
+                    $.ajax({
+                        type: "POST",
+                        url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_create_contact.php",
+                        data: fields
+                    }).done(function (response) {
+                        debugger;
+                        var responseJson = $.parseJSON(response);
+                        if (responseJson.result == 0) {
+                        }
+                        if (responseJson.result == 1) {
+                            fields["contactID"] = responseJson.contactID;
+                            var redirect_url = "https://start.nowprep.com/ready-power-v7/shipping-info/";
+                            $.redirectPost(redirect_url + window.location.search, fields);
+                            return true;
+                        }
+                    });
                 }
             });
 
@@ -525,11 +542,24 @@ debugger;
                     fields["NameOnCard"] = $('input[name="NameOnCard"]').val();
                     fields["Email"] = $('input[name="Email"]').val();
                     debugger;
-                    var redirect_url = "https://start.nowprep.com/ready-power/payment-info-v6/";
-                    if(window.location.href.indexOf("ready-power/order-info-v9") > 0) {
-                        redirect_url = "https://start.nowprep.com/ready-power/payment-info-v9/";
-                    }
-                    $.redirectPost(redirect_url + window.location.search, fields);
+                    $.ajax({
+                        type: "POST",
+                        url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_create_contact.php",
+                        data: fields
+                    }).done(function (response) {
+                        debugger;
+                        var responseJson = $.parseJSON(response);
+                        if (responseJson.result == 0) {
+                        }
+                        if (responseJson.result == 1) {
+                            fields["contactID"] = responseJson.contactID;
+                            var redirect_url = "https://start.nowprep.com/ready-power/payment-info-v6/";
+                            if(window.location.href.indexOf("ready-power/order-info-v9") > 0) {
+                                redirect_url = "https://start.nowprep.com/ready-power/payment-info-v9/";
+                            }
+                            $.redirectPost(redirect_url + window.location.search, fields);
+                        }
+                    });
                 }
             });
 
@@ -646,6 +676,8 @@ debugger;
                     fields.push({name: "utm_campaign", value: getQueryParameter("utm_campaign")});
                     fields.push({name: "utm_term", value: getQueryParameter("utm_term")});
                     fields.push({name: "utm_content", value: getQueryParameter("utm_content")});
+
+                    fields.push({name: "contactID", value: productData["contactID"]});
                     debugger;
                     $.ajax({
                         type: "POST",
@@ -759,6 +791,8 @@ debugger;
                     fields.push({name: "utm_campaign", value: getQueryParameter("utm_campaign")});
                     fields.push({name: "utm_term", value: getQueryParameter("utm_term")});
                     fields.push({name: "utm_content", value: getQueryParameter("utm_content")});
+
+                    fields.push({name: "contactID", value: productData["contactID"]});
                     debugger;
                     $.ajax({
                         type: "POST",
@@ -907,8 +941,22 @@ debugger;
                     fields["NameOnCard"] = $('input[name="NameOnCard"]').val();
                     fields["Email"] = $('input[name="Email"]').val();
                     debugger;
-                    var redirect_url = "https://start.nowprep.com/ready-power-v3/payment-info/";
-                    $.redirectPost(redirect_url + window.location.search, fields);
+                    $.ajax({
+                        type: "POST",
+                        url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_create_contact.php",
+                        data: fields
+                    }).done(function (response) {
+                        debugger;
+                        var responseJson = $.parseJSON(response);
+                        if (responseJson.result == 0) {
+                        }
+                        if (responseJson.result == 1) {
+                            fields["contactID"] = responseJson.contactID;
+                            var redirect_url = "https://start.nowprep.com/ready-power-v3/payment-info/";
+                            $.redirectPost(redirect_url + window.location.search, fields);
+                        }
+                    });
+
                 }
             });
 

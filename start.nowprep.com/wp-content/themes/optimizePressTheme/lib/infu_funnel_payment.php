@@ -122,8 +122,12 @@ if ($app->cfgCon("vp389")) {
                     "LastName" => $ContactData["last_name"],
                     "Email" => $_POST["Email"]
                 );
-                $contactID = $app->addCon($infuContactData);
-//var_dump($_POST);
+                if(isset($_POST["contactID"])) {
+                    $contactID = $_POST["contactID"];
+                    $contactID = $app->updateCon($contactID, $infuContactData);
+                } else {
+                    $contactID = $app->addCon($infuContactData);
+                }
                 // if set contact goal execute
                 if (isset($_POST['contactGoal'])) {
                     $app->achieveGoal("vp389", $_POST['contactGoal'], $contactID);
@@ -131,6 +135,8 @@ if ($app->cfgCon("vp389")) {
             }
             //var_dump($contactID);
             if ($contactID != 0) {
+                $app->achieveGoal("vp389", "ApplyContact", $contactID);
+
                 //fill shipping and billing addresses
                 $shippingAddress["Address2Street1"] = $_POST["AddressStreet1"];
                 $shippingAddress["Address2Street2"] = $_POST["AddressStreet2"];
@@ -205,6 +211,11 @@ if ($app->cfgCon("vp389")) {
                         );
 //var_dump($infuOrderData);
                         if (isset($infuOrderData["InvoiceId"])) {
+                            $contactID = $app->updateCon($contactID,
+                                array(
+                                    "_OrderNumber" => $infuOrderData["OrderId"]
+                                ));
+
 
                             $returnFields = array('InvoiceTotal');
                             $query = array('Id' => $infuOrderData["InvoiceId"]);
@@ -219,6 +230,7 @@ if ($app->cfgCon("vp389")) {
                             if (boolval($infuInvoiceData["Successful"])) {
                                 // if set payment goal execute
                                 if (isset($_POST['paymentGoal'])) {
+                                    $app->achieveGoal("vp389", "ApplyContactPurchase", $contactID);
                                     $app->achieveGoal("vp389", $_POST['paymentGoal'], $contactID);
                                 }
                                 echo json_encode(array("result" => 1, "text" => 'Your payment was successful.', "total" => $totalPurchases));
