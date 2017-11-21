@@ -233,9 +233,9 @@ if ($app->cfgCon("vp389")) {
                                     $app->achieveGoal("vp389", "ApplyContactPurchase", $contactID);
                                     $app->achieveGoal("vp389", $_POST['paymentGoal'], $contactID);
                                 }
-                                echo json_encode(array("result" => 1, "text" => 'Your payment was successful.', "total" => $totalPurchases));
+                                echo json_encode(array("result" => 1, "text" => 'Your payment was successful.', "total" => $totalPurchases, "contactID" => $contactID, "creditCardID" => $CreditCardID));
                             } else {
-                                echo json_encode(array("result" => 0, "ErrorText" => $infuInvoiceData["Message"], "total" => $totalPurchases));
+                                echo json_encode(array("result" => 0, "ErrorText" => $infuInvoiceData["Message"], "total" => $totalPurchases, "contactID" => $contactID, "creditCardID" => $CreditCardID));
                             }
                         }
                     } else {

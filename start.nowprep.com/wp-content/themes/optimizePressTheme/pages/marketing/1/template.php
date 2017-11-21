@@ -79,9 +79,9 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:title" content="Prepare for Disaster with The Radio"/>
         <meta property="og:description"
               content="This vault will keep your life organized and valuables safe before, after and during an emergency. The NowPrep Vault holds everything you need in a disaster: legal documents to protect your home and finances, life-saving first aid instructions, and survival resources for any type of emergency."/>
-        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/pim_1_540x.png"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="667"/>
+        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
+        <meta property="og:image:width" content="1500"/>
+        <meta property="og:image:height" content="1500"/>
     <?php } else if ($post->ID == 3750) { ?>
         <title>NowPrep Radio - Order Info</title>
         <meta property="og:type" content="website"/>
@@ -89,9 +89,9 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:title" content="Prepare for Disaster with The Radio"/>
         <meta property="og:description"
               content="This vault will keep your life organized and valuables safe before, after and during an emergency. The NowPrep Vault holds everything you need in a disaster: legal documents to protect your home and finances, life-saving first aid instructions, and survival resources for any type of emergency."/>
-        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/pim_1_540x.png"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="667"/>
+        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
+        <meta property="og:image:width" content="1500"/>
+        <meta property="og:image:height" content="1500"/>
     <?php } else if ($post->ID == 3794) { ?>
         <title>NowPrep Radio</title>
         <meta property="og:type" content="website"/>
@@ -99,9 +99,9 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:title" content="Prepare for Disaster with The Radio"/>
         <meta property="og:description"
               content="This vault will keep your life organized and valuables safe before, after and during an emergency. The NowPrep Vault holds everything you need in a disaster: legal documents to protect your home and finances, life-saving first aid instructions, and survival resources for any type of emergency."/>
-        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/pim_1_540x.png"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="667"/>
+        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
+        <meta property="og:image:width" content="1500"/>
+        <meta property="og:image:height" content="1500"/>
     <?php } else if ($post->ID == 3255 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3683 || $post->ID == 3719) { ?>
         <title>NowPrep Radio</title>
         <meta property="og:type" content="website"/>
@@ -109,9 +109,9 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:title" content="Prepare for Disaster with The Radio"/>
         <meta property="og:description"
               content="This vault will keep your life organized and valuables safe before, after and during an emergency. The NowPrep Vault holds everything you need in a disaster: legal documents to protect your home and finances, life-saving first aid instructions, and survival resources for any type of emergency."/>
-        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/pim_1_540x.png"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="667"/>
+        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
+        <meta property="og:image:width" content="1500"/>
+        <meta property="og:image:height" content="1500"/>
     <?php } else if ($post->ID == 3326 || $post->ID == 3399 || $post->ID == 3540 || $post->ID == 3623 || $post->ID == 3684 || $post->ID == 3723 || $post->ID == 3731) { ?>
         <title>Order - NowPrep Radio</title>
         <meta property="og:type" content="website"/>
@@ -119,9 +119,9 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:title" content="Prepare for Disaster with The Radio"/>
         <meta property="og:description"
               content="This vault will keep your life organized and valuables safe before, after and during an emergency. The NowPrep Vault holds everything you need in a disaster: legal documents to protect your home and finances, life-saving first aid instructions, and survival resources for any type of emergency."/>
-        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/pim_1_540x.png"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="667"/>
+        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
+        <meta property="og:image:width" content="1500"/>
+        <meta property="og:image:height" content="1500"/>
     <?php } else if ($post->ID == 3329 || $post->ID == 3472) { ?>
         <title>Thank You - NowPrep Radio</title>
         <meta property="og:type" content="website"/>
@@ -129,9 +129,9 @@ $class = (defined('OP_LIVEEDITOR') ? ' op-live-editor' : '');
         <meta property="og:title" content="Prepare for Disaster with The Radio"/>
         <meta property="og:description"
               content="This vault will keep your life organized and valuables safe before, after and during an emergency. The NowPrep Vault holds everything you need in a disaster: legal documents to protect your home and finances, life-saving first aid instructions, and survival resources for any type of emergency."/>
-        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/pim_1_540x.png"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image:height" content="667"/>
+        <meta property="og:image" content="https://start.nowprep.com/wp-content/uploads/71NZSW2EfpL._SL1500_.jpg"/>
+        <meta property="og:image:width" content="1500"/>
+        <meta property="og:image:height" content="1500"/>
     <?php } else if ($post->ID == 1712) { ?>
         <title>Thank You - NowPrep Ready Vault</title>
         <meta property="og:type" content="website"/>
@@ -571,9 +571,18 @@ if (!isset($_POST["productLander_oi"])) { ?>
         };
     </script>
 <?php }
+if (isset($_POST["upsell"])) { ?>
+    <script>
+        var orderTotal = "<?php echo $_POST['total'];?>";
+        var contactID = "<?php echo $_POST['contactID'];?>";
+        var creditCardID = "<?php echo $_POST['creditCardID'];?>";
+    </script>
+<?php
+}
 if (isset($_POST["thx"])) { ?>
     <script>
         var orderTotal = "<?php echo $_POST['total'];?>";
+        var addtowish = "<?php echo isset($_POST['addtowish']) ? $_POST['addtowish'] : "";?>";
     </script>
 <?php
 } else if (isset($_POST["productLander"])) { ?>
@@ -772,7 +781,7 @@ if ($app->cfgCon("vp389")) {
     ?>
 </div><!-- container -->
 <script type="text/javascript" src="https://vp389.infusionsoft.com/app/webTracking/getTrackingCode"></script>
-<?php if (is_page("ready-vault") || is_page("order-info") || is_page("ready-vault/thank-you") || $post->ID == 2826 || $post->ID == 2873 || $post->ID == 2808 || $post->ID == 3255 || $post->ID == 3326 || $post->ID == 3329 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3399 || $post->ID == 3472 || $post->ID == 3540 || $post->ID == 3623 || $post->ID == 3683 || $post->ID == 3684 || $post->ID == 3719 || $post->ID == 3723 || $post->ID == 3731 || $post->ID == 3769 || $post->ID == 3750 || $post->ID == 3794 || $post->ID == 3833 || $post->ID == 3840 || $post->ID == 3836 || $post->ID == 3899 || $post->ID == 3959 || $post->ID == 3954 || $post->ID == 3945 || $post->ID == 3985 || $post->ID == 3975 || $post->ID == 3948 || $post->ID == 3997 || $post->ID == 3951 || $post->ID == 4047 || $post->ID == 4069 || $post->ID == 4055 || $post->ID == 4128  || $post->ID == 4222 ) { ?>
+<?php if (is_page("ready-vault") || is_page("order-info") || is_page("ready-vault/thank-you") || $post->ID == 2826 || $post->ID == 2873 || $post->ID == 2808 || $post->ID == 3255 || $post->ID == 3326 || $post->ID == 3329 || $post->ID == 3480 || $post->ID == 3351 || $post->ID == 3503 || $post->ID == 3399 || $post->ID == 3472 || $post->ID == 3540 || $post->ID == 3623 || $post->ID == 3683 || $post->ID == 3684 || $post->ID == 3719 || $post->ID == 3723 || $post->ID == 3731 || $post->ID == 3769 || $post->ID == 3750 || $post->ID == 3794 || $post->ID == 3833 || $post->ID == 3840 || $post->ID == 3836 || $post->ID == 3899 || $post->ID == 3959 || $post->ID == 3954 || $post->ID == 3945 || $post->ID == 3985 || $post->ID == 3975 || $post->ID == 3948 || $post->ID == 3997 || $post->ID == 3951 || $post->ID == 4047 || $post->ID == 4069 || $post->ID == 4055 || $post->ID == 4128  || $post->ID == 4222 || $post->ID == 4147) { ?>
     <script src="https://start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_base_all.js?ver=<?php echo time(); ?>"></script>
 <?php } else if (is_page("ice-wizard-v3") || is_page("shipping-info-v3") || is_page("payment-info-v3")) { ?>
     <script src="https://start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_icecard_short_funnel_ajax.js?ver=<?php echo time(); ?>"></script>

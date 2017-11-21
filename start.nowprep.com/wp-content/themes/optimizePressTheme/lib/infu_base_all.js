@@ -502,7 +502,6 @@ debugger;
                 }
 
 
-
                 if (error == 1) {
                     $("div.pay-over").hide();
                     initPopup(msg);
@@ -554,13 +553,48 @@ debugger;
                         if (responseJson.result == 1) {
                             fields["contactID"] = responseJson.contactID;
                             var redirect_url = "https://start.nowprep.com/ready-power/payment-info-v6/";
-                            if(window.location.href.indexOf("ready-power/order-info-v9") > 0) {
+                            if (window.location.href.indexOf("ready-power/order-info-v9") > 0) {
                                 redirect_url = "https://start.nowprep.com/ready-power/payment-info-v9/";
                             }
                             $.redirectPost(redirect_url + window.location.search, fields);
                         }
                     });
                 }
+            });
+        } else if(window.location.href.indexOf("ready-power/upsell-firstaid") > 0) {
+
+            $("div.order_btns a").click(function(){
+                $("div.pay-over").remove();
+                $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
+                $("div.pay-over").show();
+
+                var fields = [];
+                fields.push({name: "contactID", value: contactID});
+                fields.push({name: "creditCardID", value: creditCardID});
+                fields.push({name: "productID", value: 51});
+
+                $.ajax({
+                    type: "POST",
+                    url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_upsell_payment.php",
+                    data: fields
+                }).done(function (response) {
+                    debugger;
+                    var responseJson = $.parseJSON(response);
+                    if (responseJson.result == 0) {
+                        $("div.pay-over").hide();
+                        initPopup(responseJson.ErrorText);
+                    }
+                    if (responseJson.result == 1) {
+
+                        var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+                        $.redirectPost(redirect_url, {thx:1, total: responseJson.total, addtowish:1});
+                        return true;
+                    }
+                });
+            });
+            $("a.btn_no_thanks").click(function(){
+                var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+                $.redirectPost(redirect_url, {thx:1});
             });
 
         } else if(window.location.href.indexOf("ready-power/payment-info-v6") > 0 || window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
@@ -629,7 +663,7 @@ debugger;
 
                     var newOrderDiscount = false;
                     if(window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
-                        newOrderDiscount = true;
+                        //newOrderDiscount = true;
                     }
 
                     if ($(this).find('input[name="quantity"]').length > 0) {
@@ -743,7 +777,12 @@ debugger;
                         if (responseJson.result == 1) {
 
                             var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                            $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
+                            if(window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
+                                redirect_url = "https://start.nowprep.com/ready-power/upsell-firstaid/";
+                                $.redirectPost(redirect_url, {upsell: 1, total: responseJson.total, contactID: responseJson.contactID, creditCardID: responseJson.creditCardID});
+                            } else {
+                                $.redirectPost(redirect_url, {thx: 1, total: responseJson.total});
+                            }
                             return true;
                         }
                     });
