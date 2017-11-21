@@ -626,21 +626,67 @@ debugger;
                     if ($("input#funnel-lifetime-warranty").is(':checked')) {
                         fields.push({name: "flwProductID", value: 23});
                     }
+
+                    var newOrderDiscount = false;
+                    if(window.location.href.indexOf("ready-power/payment-info-v9") > 0) {
+                        newOrderDiscount = true;
+                    }
+
                     if ($(this).find('input[name="quantity"]').length > 0) {
                         $(this).find('input[name="quantity"]').each(function () {
                             if ($(this).is(":checked")) {
-                                if ($(this).attr("id") == "quantity2") {
-                                    fields.push({name: "infuProductID", value: 37});
-                                    fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_er2")});
-                                } else if ($(this).attr("id") == "quantity1") {
-                                    fields.push({name: "infuProductID", value: 39});
-                                    fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_er1")});
-                                } else if ($(this).attr("id") == "quantity3") {
-                                    fields.push({name: "infuProductID", value: 35});
-                                    fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_er3")});
-                                } else if ($(this).attr("id") == "quantity4") {
-                                    fields.push({name: "infuProductID", value: 33});
-                                    fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_er4")});
+                                if(newOrderDiscount) {
+                                    if ($(this).attr("id") == "quantity2") {
+                                            fields.push({name: "infuProductID", value: 45});
+                                            fields.push({
+                                                name: "paymentGoal",
+                                                value: (productData["paymentGoal"] + "_rpd2")
+                                            });
+                                    } else if ($(this).attr("id") == "quantity1") {
+                                            fields.push({name: "infuProductID", value: 47});
+                                            fields.push({
+                                                name: "paymentGoal",
+                                                value: (productData["paymentGoal"] + "_rpd1")
+                                            });
+                                    } else if ($(this).attr("id") == "quantity3") {
+                                            fields.push({name: "infuProductID", value: 43});
+                                            fields.push({
+                                                name: "paymentGoal",
+                                                value: (productData["paymentGoal"] + "_rpd3")
+                                            });
+                                    } else if ($(this).attr("id") == "quantity4") {
+                                            fields.push({name: "infuProductID", value: 41});
+                                            fields.push({
+                                                name: "paymentGoal",
+                                                value: (productData["paymentGoal"] + "_rpd4")
+                                            });
+                                    }
+                                } else {
+                                    if ($(this).attr("id") == "quantity2") {
+                                        fields.push({name: "infuProductID", value: 37});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_er2")
+                                        });
+                                    } else if ($(this).attr("id") == "quantity1") {
+                                        fields.push({name: "infuProductID", value: 39});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_er1")
+                                        });
+                                    } else if ($(this).attr("id") == "quantity3") {
+                                        fields.push({name: "infuProductID", value: 35});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_er3")
+                                        });
+                                    } else if ($(this).attr("id") == "quantity4") {
+                                        fields.push({name: "infuProductID", value: 33});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_er4")
+                                        });
+                                    }
                                 }
                             }
                         });
