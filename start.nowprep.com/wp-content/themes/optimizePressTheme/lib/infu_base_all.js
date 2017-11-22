@@ -1162,9 +1162,24 @@ debugger;
                     var newOrder = false;
                     var newOrder1 = false;
                     var newOrderDiscount = false;
+                    var newOrderDiscount2 = false;
                     var newOrder2 = false;
+                    var newOrder56 = false;
+                    var newOrder475 = false;
+                    var newOrder44 = false;
+                    var newOrder39 = false;
 
-                    if (window.location.href.indexOf("/ready-power-discount") > 0) {
+                    if (window.location.href.indexOf("/ready-power-56") > 0) {
+                        newOrder56 = true;
+                    } else if (window.location.href.indexOf("/ready-power-475") > 0) {
+                        newOrder475 = true;
+                    } else if (window.location.href.indexOf("/ready-power-44") > 0) {
+                        newOrder44 = true;
+                    } else if (window.location.href.indexOf("/ready-power-39") > 0) {
+                        newOrder39 = true;
+                    } else if (window.location.href.indexOf("/ready-power-discount35") > 0) {
+                        newOrderDiscount2 = true;
+                    } else if (window.location.href.indexOf("/ready-power-discount") > 0) {
                         newOrderDiscount = true;
                     } else if(window.location.href.indexOf("ready-power/order-info-v10") > 0) {
                         newOrder2 = true;
@@ -1192,12 +1207,41 @@ debugger;
                     if ($("input#funnel-lifetime-warranty").is(':checked')) {
                         fields.push({name: "flwProductID", value: 23});
                     }
-                    if ($(this).find('input[name="quantity"]').length > 0) {
+                    if(newOrderDiscount2) {
+                        fields.push({name: "infuProductID", value: 119});
+                        fields.push({
+                            name: "paymentGoal",
+                            value: (productData["paymentGoal"] + "_rpdd1")
+                        });
+                    } else if ($(this).find('input[name="quantity"]').length > 0) {
                         $(this).find('input[name="quantity"]').each(function () {
                             if ($(this).is(":checked")) {
                                 if ($(this).attr("id") == "quantity2") {
-                                    //fields.push({name: "infuProductQuantity", value: 2});
-                                    if (newOrderDiscount) {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 55});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_2")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 71});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_2")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 87});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_2")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 103});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_2")
+                                        });
+                                    } else if (newOrderDiscount) {
                                         fields.push({name: "infuProductID", value: 45});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1217,7 +1261,31 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n2")});
                                     }
                                 } else if ($(this).attr("id") == "quantity1") {
-                                    if(newOrder2) {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 61});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_1")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 77});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_1")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 93});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_1")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 109});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_1")
+                                        });
+                                    } else if(newOrder2) {
                                         fields.push({name: "infuProductID", value: 49});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1243,8 +1311,31 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n1")});
                                     }
                                 } else if ($(this).attr("id") == "quantity3") {
-                                    //fields.push({name: "infuProductQuantity", value: 3});
-                                    if (newOrderDiscount) {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 57});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_3")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 73});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_3")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 89});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_3")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 105});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_3")
+                                        });
+                                    } else if (newOrderDiscount) {
                                         fields.push({name: "infuProductID", value: 43});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1264,8 +1355,31 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n3")});
                                     }
                                 } else if ($(this).attr("id") == "quantity4") {
-                                    //fields.push({name: "infuProductQuantity", value: 4});
-                                    if (newOrderDiscount) {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 59});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_4")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 75});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_4")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 91});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_4")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 107});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_4")
+                                        });
+                                    } else if (newOrderDiscount) {
                                         fields.push({name: "infuProductID", value: 41});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1283,6 +1397,110 @@ debugger;
                                     } else {
                                         fields.push({name: "infuProductID", value: 25});
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n4")});
+                                    }
+                                } else if($(this).attr("id") == "quantity5") {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 63});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_5")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 79});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_5")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 95});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_5")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 111});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_5")
+                                        });
+                                    }
+                                } else if($(this).attr("id") == "quantity10") {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 65});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_10")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 81});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_10")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 97});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_10")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 113});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_10")
+                                        });
+                                    }
+                                } else if($(this).attr("id") == "quantity15") {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 67});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_15")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 83});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_15")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 99});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_15")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 115});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_15")
+                                        });
+                                    }
+                                } else if($(this).attr("id") == "quantity20") {
+                                    if (newOrder56) {
+                                        fields.push({name: "infuProductID", value: 69});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_56_20")
+                                        });
+                                    } else if (newOrder475) {
+                                        fields.push({name: "infuProductID", value: 85});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_475_20")
+                                        });
+                                    } else if (newOrder44) {
+                                        fields.push({name: "infuProductID", value: 101});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_44_20")
+                                        });
+                                    } else if (newOrder39) {
+                                        fields.push({name: "infuProductID", value: 117});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_39_20")
+                                        });
                                     }
                                 }
                             }
