@@ -563,7 +563,7 @@ debugger;
             });
         } else if(window.location.href.indexOf("ready-power/upsell-firstaid") > 0) {
 
-            $("div.order_btns a").click(function(){
+            $("div.order_btns a, a.up_confirm_btn").click(function(){
                 $("div.pay-over").remove();
                 $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
                 $("div.pay-over").show();
@@ -592,7 +592,7 @@ debugger;
                     }
                 });
             });
-            $("a.btn_no_thanks").click(function(){
+            $("a.btn_no_thanks, a.up_no_thanks_btn").click(function(){
                 var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
                 $.redirectPost(redirect_url, {thx:1});
             });
@@ -1046,8 +1046,9 @@ debugger;
             });
 
         } else {
-
+            debugger;
             $("form.payment-product, form#order-payment, form#order-payment-v1").submit(function (e) {
+                debugger;
                 e.preventDefault();
                 if (window.location.href.indexOf("radio") > 0 || window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
                     $("div.pay-over").remove();
@@ -1189,6 +1190,8 @@ debugger;
                                 window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
                                 window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
                                 window.location.href.indexOf("ready-power/order-info-v5") > 0 ||
+                                window.location.href.indexOf("ready-power/order-info-v11") > 0 ||
+                                window.location.href.indexOf("ready-power/order-info-v12") > 0 ||
                                 window.location.href.indexOf("ready-power-v8/order-info") > 0) {
                         newOrder1 = true;
                     } else if (window.location.href.indexOf("/order-info-v1") > 0 || window.location.href.indexOf("/order-info-v2") > 0) {
@@ -1532,8 +1535,20 @@ debugger;
                         if (responseJson.result == 1) {
 
                             var redirect_url = "";
+                            if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0) {
+                                debugger;
+                                $("div.pay-over").hide();
 
-                            if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
+                                $(".pop_heading").remove();
+                                $(".upsell_popup_inn").prepend('<div class="pop_heading"><h3><span class="color_red">WAIT!</span> ' + sName + ', Add our <span class="color_red">Ultimate Emergency Kit</span> to your Order for <span class="color_red">only $19</span></h3></div>');
+
+                                $(".upsell_popup_outer").attr('contactID', responseJson.contactID);
+                                $(".upsell_popup_outer").attr('creditCardID', responseJson.creditCardID);
+                                fbq('track','Purchase',{currency:'USD',value:parseFloat(responseJson.total)});
+                                window._vis_opt_queue=window._vis_opt_queue||[];
+                                window._vis_opt_queue.push(function(){_vis_opt_revenue_conversion(parseFloat(responseJson.total));});
+                                $(".upsell_popup_outer").show();
+                            } else if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
                                 redirect_url = "https://start.nowprep.com/ready-power/upsell-firstaid";
                                 $.redirectPost(redirect_url, {upsell: 1, total: responseJson.total, contactID: responseJson.contactID, creditCardID: responseJson.creditCardID});
                             } else if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
@@ -1553,6 +1568,42 @@ debugger;
                     //    return false;
                     //}
                 }
+            });
+        }
+        if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0) {
+            $("a.up_confirm_btn").click(function(){
+                debugger;
+                $("div.pay-over").remove();
+                $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
+                $("div.pay-over").show();
+
+                var fields = [];
+                fields.push({name: "contactID", value: $(".upsell_popup_outer").attr('contactID')});
+                fields.push({name: "creditCardID", value: $(".upsell_popup_outer").attr('creditCardID')});
+                fields.push({name: "productID", value: 121});
+
+                $.ajax({
+                    type: "POST",
+                    url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_upsell_payment.php",
+                    data: fields
+                }).done(function (response) {
+                    debugger;
+                    var responseJson = $.parseJSON(response);
+                    if (responseJson.result == 0) {
+                        $("div.pay-over").hide();
+                        initPopup(responseJson.ErrorText);
+                    }
+                    if (responseJson.result == 1) {
+
+                        var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+                        $.redirectPost(redirect_url, {thx:1, total: responseJson.total, addtowish:1});
+                        return true;
+                    }
+                });
+            });
+            $("a.up_no_thanks_btn").click(function(){
+                var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+                $.redirectPost(redirect_url, {thx:1});
             });
         }
     });
