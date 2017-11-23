@@ -582,8 +582,26 @@ if (isset($_POST["upsell"])) { ?>
 }
 if (isset($_POST["thx"])) { ?>
     <script>
+        <?php
+        if (isset($_POST['addtowish'])) {
+                ?>
+            var orderTotal = "<?php echo $_POST['total'];?>";
+            var addtowish = "<?php echo $_POST['addtowish'];?>";
+            debugger;
+            if(typeof(addtowish)!=='undefined'){
+                fbq('track','AddToWishlist',{currency:'USD',value:parseFloat(orderTotal)});
+            }
+            <?php
+        } else if (isset($_POST['total'])) {
+        ?>
         var orderTotal = "<?php echo $_POST['total'];?>";
-        var addtowish = "<?php echo isset($_POST['addtowish']) ? $_POST['addtowish'] : "";?>";
+        debugger;
+        if(typeof(orderTotal)!=='undefined'){
+            fbq('track','Purchase',{currency:'USD',value:parseFloat(orderTotal)});
+            window._vis_opt_queue=window._vis_opt_queue||[];
+            window._vis_opt_queue.push(function(){_vis_opt_revenue_conversion(parseFloat(orderTotal));});
+        }
+        <?php } ?>
     </script>
 <?php
 } else if (isset($_POST["productLander"])) { ?>

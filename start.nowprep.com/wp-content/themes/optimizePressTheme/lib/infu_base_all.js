@@ -1532,14 +1532,20 @@ debugger;
                         if (responseJson.result == 1) {
 
                             var redirect_url = "";
-                            if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
+
+                            if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
+                                redirect_url = "https://start.nowprep.com/ready-power/upsell-firstaid";
+                                $.redirectPost(redirect_url, {upsell: 1, total: responseJson.total, contactID: responseJson.contactID, creditCardID: responseJson.creditCardID});
+                            } else if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
                                 redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             } else if (window.location.href.indexOf("radio") > 0) {
                                 redirect_url = "https://start.nowprep.com/radio/thank-you/";
+                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             } else {
                                 redirect_url = "https://start.nowprep.com/ready-vault/thank-you/";
+                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             }
-                            $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             return true;
                         }
                     });
