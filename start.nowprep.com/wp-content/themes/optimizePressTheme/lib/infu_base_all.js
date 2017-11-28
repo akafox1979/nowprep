@@ -1050,7 +1050,10 @@ debugger;
             $("form.payment-product, form#order-payment, form#order-payment-v1").submit(function (e) {
                 debugger;
                 e.preventDefault();
-                if (window.location.href.indexOf("radio") > 0 || window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
+                if (window.location.href.indexOf("first-aid") > 0 ||
+                    window.location.href.indexOf("radio") > 0 ||
+                    window.location.href.indexOf("emergency-radio") > 0 ||
+                    window.location.href.indexOf("ready-power") > 0) {
                     $("div.pay-over").remove();
                     $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
                     $("div.pay-over").show();
@@ -1169,8 +1172,12 @@ debugger;
                     var newOrder475 = false;
                     var newOrder44 = false;
                     var newOrder39 = false;
+                    var firstaid = false;
 
-                    if (window.location.href.indexOf("/ready-power-56") > 0) {
+                    if (window.location.href.indexOf("first-aid/order-info") > 0 ||
+                        window.location.href.indexOf("first-aid/order-info-v2") > 0 ) {
+                        firstaid = true;
+                    } else if (window.location.href.indexOf("/ready-power-56") > 0) {
                         newOrder56 = true;
                     } else if (window.location.href.indexOf("/ready-power-475") > 0) {
                         newOrder475 = true;
@@ -1210,7 +1217,34 @@ debugger;
                     if ($("input#funnel-lifetime-warranty").is(':checked')) {
                         fields.push({name: "flwProductID", value: 23});
                     }
-                    if(newOrderDiscount2) {
+                    if(window.location.href.indexOf("first-aid/order-info-v2") > 0 ) {
+                        var quantityValue = $(this).find('select[name="quantity"]').val();
+                        if( quantityValue == "1-units") {
+                            fields.push({name: "infuProductID", value: 123});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: "PurchasedEmergencyKit_x1"
+                            });
+                        } else if( quantityValue == "2-units") {
+                            fields.push({name: "infuProductID", value: 125});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: "PurchasedEmergencyKit_x2"
+                            });
+                        } else if( quantityValue == "3-units") {
+                            fields.push({name: "infuProductID", value: 127});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: "PurchasedEmergencyKit_x3"
+                            });
+                        } else if( quantityValue == "4-units") {
+                            fields.push({name: "infuProductID", value: 129});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: "PurchasedEmergencyKit_x4"
+                            });
+                        }
+                    } else if(newOrderDiscount2) {
                         fields.push({name: "infuProductID", value: 119});
                         fields.push({
                             name: "paymentGoal",
@@ -1220,7 +1254,14 @@ debugger;
                         $(this).find('input[name="quantity"]').each(function () {
                             if ($(this).is(":checked")) {
                                 if ($(this).attr("id") == "quantity2") {
-                                    if (newOrder56) {
+                                    if (firstaid) {
+                                        fields.push({name: "infuProductID", value: 125});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: "PurchasedEmergencyKit_x2"
+                                        });
+
+                                    } else if (newOrder56) {
                                         fields.push({name: "infuProductID", value: 55});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1264,7 +1305,14 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n2")});
                                     }
                                 } else if ($(this).attr("id") == "quantity1") {
-                                    if (newOrder56) {
+                                    if (firstaid) {
+                                        fields.push({name: "infuProductID", value: 123});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: "PurchasedEmergencyKit_x1"
+                                        });
+
+                                    } else if (newOrder56) {
                                         fields.push({name: "infuProductID", value: 61});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1314,7 +1362,14 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n1")});
                                     }
                                 } else if ($(this).attr("id") == "quantity3") {
-                                    if (newOrder56) {
+                                    if (firstaid) {
+                                        fields.push({name: "infuProductID", value: 127});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: "PurchasedEmergencyKit_x3"
+                                        });
+
+                                    } else if (newOrder56) {
                                         fields.push({name: "infuProductID", value: 57});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1358,7 +1413,14 @@ debugger;
                                         fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n3")});
                                     }
                                 } else if ($(this).attr("id") == "quantity4") {
-                                    if (newOrder56) {
+                                    if (firstaid) {
+                                        fields.push({name: "infuProductID", value: 129});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: "PurchasedEmergencyKit_x4"
+                                        });
+
+                                    } else if (newOrder56) {
                                         fields.push({name: "infuProductID", value: 59});
                                         fields.push({
                                             name: "paymentGoal",
@@ -1521,6 +1583,8 @@ debugger;
                     fields.push({name: "utm_term", value: getQueryParameter("utm_term")});
                     fields.push({name: "utm_content", value: getQueryParameter("utm_content")});
 
+                    fields.push({name: "firstaid", value: 1});
+
                     //if ($('input[name="tpp"]').is(':checked')) {
                     $.ajax({
                         type: "POST",
@@ -1535,7 +1599,10 @@ debugger;
                         if (responseJson.result == 1) {
 
                             var redirect_url = "";
-                            if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0) {
+                            if(firstaid) {
+                                redirect_url = "https://start.nowprep.com/first-aid/thank-you/";
+                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
+                            } else if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0 || newOrder56 || newOrder475 || newOrder44 || newOrder39) {
                                 debugger;
                                 $("div.pay-over").hide();
 
@@ -1548,10 +1615,10 @@ debugger;
                                 window._vis_opt_queue=window._vis_opt_queue||[];
                                 window._vis_opt_queue.push(function(){_vis_opt_revenue_conversion(parseFloat(responseJson.total));});
                                 $(".upsell_popup_outer").show();
-                            } else if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
+                            } /*else if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
                                 redirect_url = "https://start.nowprep.com/ready-power/upsell-firstaid";
                                 $.redirectPost(redirect_url, {upsell: 1, total: responseJson.total, contactID: responseJson.contactID, creditCardID: responseJson.creditCardID});
-                            } else if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
+                            } */else if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
                                 redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
                                 $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
                             } else if (window.location.href.indexOf("radio") > 0) {
@@ -1570,7 +1637,14 @@ debugger;
                 }
             });
         }
-        if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0) {
+        if(
+            window.location.href.indexOf("ready-power/order-info-v11") > 0 ||
+            window.location.href.indexOf("ready-power/order-info-v12") > 0 ||
+            window.location.href.indexOf("ready-power-56/order-info") > 0  ||
+            window.location.href.indexOf("ready-power-475/order-info") > 0 ||
+            window.location.href.indexOf("ready-power-44/order-info") > 0  ||
+            window.location.href.indexOf("ready-power-39/order-info") > 0
+        ) {
             $("a.up_confirm_btn").click(function(){
                 debugger;
                 $("div.pay-over").remove();

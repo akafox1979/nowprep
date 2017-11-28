@@ -135,7 +135,8 @@ if ($app->cfgCon("vp389")) {
             }
             //var_dump($contactID);
             if ($contactID != 0) {
-                $app->achieveGoal("vp389", "ApplyContact", $contactID);
+                if(!isset($_POST["firstaid"]))
+                    $app->achieveGoal("vp389", "ApplyContact", $contactID);
 
                 //fill shipping and billing addresses
                 $shippingAddress["Address2Street1"] = $_POST["AddressStreet1"];
@@ -230,7 +231,8 @@ if ($app->cfgCon("vp389")) {
                             if (boolval($infuInvoiceData["Successful"])) {
                                 // if set payment goal execute
                                 if (isset($_POST['paymentGoal'])) {
-                                    $app->achieveGoal("vp389", "ApplyContactPurchase", $contactID);
+                                    if(!isset($_POST["firstaid"]))
+                                        $app->achieveGoal("vp389", "ApplyContactPurchase", $contactID);
                                     $app->achieveGoal("vp389", $_POST['paymentGoal'], $contactID);
                                 }
                                 echo json_encode(array("result" => 1, "text" => 'Your payment was successful.', "total" => $totalPurchases, "contactID" => $contactID, "creditCardID" => $CreditCardID));
