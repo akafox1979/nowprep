@@ -1177,13 +1177,21 @@ debugger;
                     if (window.location.href.indexOf("first-aid/order-info") > 0 ||
                         window.location.href.indexOf("first-aid/order-info-v2") > 0 ) {
                         firstaid = true;
-                    } else if (window.location.href.indexOf("/ready-power-56") > 0) {
+                    } else if (
+                        window.location.href.indexOf("/ready-power-56") > 0 ||
+                        window.location.href.indexOf("/ready-power-56b") > 0) {
                         newOrder56 = true;
-                    } else if (window.location.href.indexOf("/ready-power-475") > 0) {
+                    } else if (
+                        window.location.href.indexOf("/ready-power-475") > 0 ||
+                        window.location.href.indexOf("/ready-power-475b") > 0) {
                         newOrder475 = true;
-                    } else if (window.location.href.indexOf("/ready-power-44") > 0) {
+                    } else if (
+                        window.location.href.indexOf("/ready-power-44") > 0 ||
+                        window.location.href.indexOf("/ready-power-44b") > 0) {
                         newOrder44 = true;
-                    } else if (window.location.href.indexOf("/ready-power-39") > 0) {
+                    } else if (
+                        window.location.href.indexOf("/ready-power-39") > 0 ||
+                        window.location.href.indexOf("/ready-power-39b") > 0) {
                         newOrder39 = true;
                     } else if (window.location.href.indexOf("/ready-power-discount35") > 0) {
                         newOrderDiscount2 = true;
@@ -1192,6 +1200,7 @@ debugger;
                     } else if(window.location.href.indexOf("ready-power/order-info-v10") > 0) {
                         newOrder2 = true;
                     } else if (
+                                window.location.href.indexOf("/ready-power-31/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
                                 window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
