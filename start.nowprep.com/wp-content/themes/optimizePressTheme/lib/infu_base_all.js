@@ -163,12 +163,12 @@
                 }
             }
         });
-debugger;
+        debugger;
 
-/*
+        /*
 
 
- */
+         */
         if(window.location.href.indexOf("ready-power-v7/shipping-info") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
@@ -671,29 +671,29 @@ debugger;
                             if ($(this).is(":checked")) {
                                 if(newOrderDiscount) {
                                     if ($(this).attr("id") == "quantity2") {
-                                            fields.push({name: "infuProductID", value: 45});
-                                            fields.push({
-                                                name: "paymentGoal",
-                                                value: (productData["paymentGoal"] + "_rpd2")
-                                            });
+                                        fields.push({name: "infuProductID", value: 45});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_rpd2")
+                                        });
                                     } else if ($(this).attr("id") == "quantity1") {
-                                            fields.push({name: "infuProductID", value: 47});
-                                            fields.push({
-                                                name: "paymentGoal",
-                                                value: (productData["paymentGoal"] + "_rpd1")
-                                            });
+                                        fields.push({name: "infuProductID", value: 47});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_rpd1")
+                                        });
                                     } else if ($(this).attr("id") == "quantity3") {
-                                            fields.push({name: "infuProductID", value: 43});
-                                            fields.push({
-                                                name: "paymentGoal",
-                                                value: (productData["paymentGoal"] + "_rpd3")
-                                            });
+                                        fields.push({name: "infuProductID", value: 43});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_rpd3")
+                                        });
                                     } else if ($(this).attr("id") == "quantity4") {
-                                            fields.push({name: "infuProductID", value: 41});
-                                            fields.push({
-                                                name: "paymentGoal",
-                                                value: (productData["paymentGoal"] + "_rpd4")
-                                            });
+                                        fields.push({name: "infuProductID", value: 41});
+                                        fields.push({
+                                            name: "paymentGoal",
+                                            value: (productData["paymentGoal"] + "_rpd4")
+                                        });
                                     }
                                 } else {
                                     if ($(this).attr("id") == "quantity2") {
@@ -791,9 +791,9 @@ debugger;
         } else if(window.location.href.indexOf("ready-power-v3/payment-info") > 0) {
             $("form#order-payment-v1").submit(function (e) {
                 e.preventDefault();
-                    $("div.pay-over").remove();
-                    $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
-                    $("div.pay-over").show();
+                $("div.pay-over").remove();
+                $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
+                $("div.pay-over").show();
 
                 var msg = '';
                 var error = 0;
@@ -1053,7 +1053,8 @@ debugger;
                 if (window.location.href.indexOf("first-aid") > 0 ||
                     window.location.href.indexOf("radio") > 0 ||
                     window.location.href.indexOf("emergency-radio") > 0 ||
-                    window.location.href.indexOf("ready-power") > 0) {
+                    window.location.href.indexOf("ready-power") > 0 ||
+                    window.location.href.indexOf("readypower") > 0) {
                     $("div.pay-over").remove();
                     $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
                     $("div.pay-over").show();
@@ -1172,524 +1173,590 @@ debugger;
                     var newOrder475 = false;
                     var newOrder44 = false;
                     var newOrder39 = false;
+                    var newOrder3x30 = false; //113017 Price Test
+                    var newOrder3x34 = false; //113017 Price Test
+                    var newOrder3x44 = false; //113017 Price Test
                     var firstaid = false;
 
                     if (window.location.href.indexOf("first-aid/order-info") > 0 ||
                         window.location.href.indexOf("first-aid/order-info-v2") > 0 ) {
                         firstaid = true;
                     } else if (
-                        window.location.href.indexOf("/ready-power-56") > 0 ||
-                        window.location.href.indexOf("/ready-power-56b") > 0) {
-                        newOrder56 = true;
-                    } else if (
-                        window.location.href.indexOf("/ready-power-475") > 0 ||
-                        window.location.href.indexOf("/ready-power-475b") > 0) {
-                        newOrder475 = true;
-                    } else if (
-                        window.location.href.indexOf("/ready-power-44") > 0 ||
-                        window.location.href.indexOf("/ready-power-44b") > 0) {
-                        newOrder44 = true;
-                    } else if (
-                        window.location.href.indexOf("/ready-power-39") > 0 ||
-                        window.location.href.indexOf("/ready-power-39b") > 0) {
-                        newOrder39 = true;
-                    } else if (window.location.href.indexOf("/ready-power-discount35") > 0) {
-                        newOrderDiscount2 = true;
-                    } else if (window.location.href.indexOf("/ready-power-discount") > 0) {
-                        newOrderDiscount = true;
-                    } else if(window.location.href.indexOf("ready-power/order-info-v10") > 0) {
-                        newOrder2 = true;
-                    } else if (
-                                window.location.href.indexOf("/ready-power-31/order-info/") > 0  ||
-                                window.location.href.indexOf("/ready-power/order-info/") > 0  ||
-                                window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
-                                window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
-                                window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
-                                window.location.href.indexOf("ready-power/order-info-v5") > 0 ||
-                                window.location.href.indexOf("ready-power/order-info-v11") > 0 ||
-                                window.location.href.indexOf("ready-power/order-info-v12") > 0 ||
-                                window.location.href.indexOf("ready-power-v8/order-info") > 0) {
-                        newOrder1 = true;
-                    } else if (window.location.href.indexOf("/order-info-v1") > 0 || window.location.href.indexOf("/order-info-v2") > 0) {
-                        newOrder = true;
-                    }
-                    if (newOrder) {
-                        $('input[name="BillingAddressStreet1"]').val($('input[name="AddressStreet1"]').val());
-                        $('input[name="BillingAddressStreet2"]').val($('input[name="AddressStreet2"]').val());
-                        $('input[name="BillingCity"]').val($('input[name="City"]').val());
-                        $('select[name="BillingState"]').val($('select[name="State"]').val());
-                        $('input[name="BillingPostalCode"]').val($('input[name="PostalCode"]').val());
-                    }
+                        window.location.href.indexOf("/readypower-device/order-info-30/") > 0 ){
+                        newOrder3x30 = true;
+                } else if (
+                    window.location.href.indexOf("/readypower-device/order-info-34/") > 0 ){
+                    newOrder3x34 = true;
+            } else if (
+                window.location.href.indexOf("/readypower-device/order-info-44/") > 0 ){
+                newOrder3x44 = true;
+        } else if (
+            window.location.href.indexOf("/ready-power-56") > 0 ||
+            window.location.href.indexOf("/ready-power-56b") > 0) {
+            newOrder56 = true;
+        } else if (
+            window.location.href.indexOf("/ready-power-475") > 0 ||
+            window.location.href.indexOf("/ready-power-475b") > 0) {
+            newOrder475 = true;
+        } else if (
+            window.location.href.indexOf("/ready-power-44") > 0 ||
+            window.location.href.indexOf("/ready-power-44b") > 0) {
+            newOrder44 = true;
+        } else if (
+            window.location.href.indexOf("/ready-power-39") > 0 ||
+            window.location.href.indexOf("/ready-power-39b") > 0) {
+            newOrder39 = true;
+        } else if (window.location.href.indexOf("/ready-power-discount35") > 0) {
+            newOrderDiscount2 = true;
+        } else if (window.location.href.indexOf("/ready-power-discount") > 0) {
+            newOrderDiscount = true;
+        } else if(window.location.href.indexOf("ready-power/order-info-v10") > 0) {
+            newOrder2 = true;
+        } else if (
+            window.location.href.indexOf("/ready-power-31/order-info/") > 0  ||
+            window.location.href.indexOf("/ready-power/order-info/") > 0  ||
+            window.location.href.indexOf("/ready-power-v1/order-info/") > 0  ||
+            window.location.href.indexOf("/ready-power-v2/order-info/") > 0  ||
+            window.location.href.indexOf("ready-power-v4/order-info-v4") > 0 ||
+            window.location.href.indexOf("ready-power/order-info-v5") > 0 ||
+            window.location.href.indexOf("ready-power/order-info-v11") > 0 ||
+            window.location.href.indexOf("ready-power/order-info-v12") > 0 ||
+            window.location.href.indexOf("ready-power-v8/order-info") > 0) {
+            newOrder1 = true;
+        } else if (window.location.href.indexOf("/order-info-v1") > 0 || window.location.href.indexOf("/order-info-v2") > 0) {
+            newOrder = true;
+        }
+        if (newOrder) {
+            $('input[name="BillingAddressStreet1"]').val($('input[name="AddressStreet1"]').val());
+            $('input[name="BillingAddressStreet2"]').val($('input[name="AddressStreet2"]').val());
+            $('input[name="BillingCity"]').val($('input[name="City"]').val());
+            $('select[name="BillingState"]').val($('select[name="State"]').val());
+            $('input[name="BillingPostalCode"]').val($('input[name="PostalCode"]').val());
+        }
 
-                    var fields = $(this).serializeArray();
+        var fields = $(this).serializeArray();
 
-                    if ($("input#funnel-lifetime-warranty").is(':checked')) {
-                        fields.push({name: "flwProductID", value: 23});
-                    }
-                    if(window.location.href.indexOf("first-aid/order-info-v2") > 0 ) {
-                        var quantityValue = $(this).find('select[name="quantity"]').val();
-                        if( quantityValue == "1-units") {
-                            fields.push({name: "infuProductID", value: 123});
-                            fields.push({
-                                name: "paymentGoal",
-                                value: "PurchasedEmergencyKit_x1"
-                            });
-                        } else if( quantityValue == "2-units") {
+        if ($("input#funnel-lifetime-warranty").is(':checked')) {
+            fields.push({name: "flwProductID", value: 23});
+        }
+        if(window.location.href.indexOf("first-aid/order-info-v2") > 0 ) {
+            var quantityValue = $(this).find('select[name="quantity"]').val();
+            if( quantityValue == "1-units") {
+                fields.push({name: "infuProductID", value: 123});
+                fields.push({
+                    name: "paymentGoal",
+                    value: "PurchasedEmergencyKit_x1"
+                });
+            } else if( quantityValue == "2-units") {
+                fields.push({name: "infuProductID", value: 125});
+                fields.push({
+                    name: "paymentGoal",
+                    value: "PurchasedEmergencyKit_x2"
+                });
+            } else if( quantityValue == "3-units") {
+                fields.push({name: "infuProductID", value: 127});
+                fields.push({
+                    name: "paymentGoal",
+                    value: "PurchasedEmergencyKit_x3"
+                });
+            } else if( quantityValue == "4-units") {
+                fields.push({name: "infuProductID", value: 129});
+                fields.push({
+                    name: "paymentGoal",
+                    value: "PurchasedEmergencyKit_x4"
+                });
+            }
+        } else if(newOrderDiscount2) {
+            fields.push({name: "infuProductID", value: 119});
+            fields.push({
+                name: "paymentGoal",
+                value: (productData["paymentGoal"] + "_rpdd1")
+            });
+        } else if ($(this).find('input[name="quantity"]').length > 0) {
+            $(this).find('input[name="quantity"]').each(function () {
+                if ($(this).is(":checked")) {
+                    if ($(this).attr("id") == "quantity2") {
+                        if (firstaid) {
                             fields.push({name: "infuProductID", value: 125});
                             fields.push({
                                 name: "paymentGoal",
                                 value: "PurchasedEmergencyKit_x2"
                             });
-                        } else if( quantityValue == "3-units") {
+
+                        } else if (newOrder3x30) {
+                            fields.push({name: "infuProductID", value: 133});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x30_2")
+                            });
+                        } else if (newOrder3x34) {
+                            fields.push({name: "infuProductID", value: 139});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x34_2")
+                            });
+                        } else if (newOrder3x44) {
+                            fields.push({name: "infuProductID", value: 145});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x44_2")
+                            });
+                        } else if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 55});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_2")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 71});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_2")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 87});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_2")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 103});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_2")
+                            });
+                        } else if (newOrderDiscount) {
+                            fields.push({name: "infuProductID", value: 45});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_rpd2")
+                            });
+                        } else if (newOrder1) {
+                            fields.push({name: "infuProductID", value: 37});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_er2")
+                            });
+                        } else if (!newOrder) {
+                            fields.push({name: "infuProductID", value: 15});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_1")});
+                        } else {
+                            fields.push({name: "infuProductID", value: 29});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n2")});
+                        }
+                    } else if ($(this).attr("id") == "quantity1") {
+                        if (firstaid) {
+                            fields.push({name: "infuProductID", value: 123});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: "PurchasedEmergencyKit_x1"
+                            });
+
+                        } else if (newOrder3x30) {
+                            fields.push({name: "infuProductID", value: 135});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x30_1")
+                            });
+                        } else if (newOrder3x34) {
+                            fields.push({name: "infuProductID", value: 141});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x34_1")
+                            });
+                        } else if (newOrder3x44) {
+                            fields.push({name: "infuProductID", value: 147});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x44_1")
+                            });
+                        } else if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 61});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_1")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 77});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_1")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 93});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_1")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 109});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_1")
+                            });
+                        } else if(newOrder2) {
+                            fields.push({name: "infuProductID", value: 49});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_rpr1")
+                            });
+                        } else if (newOrderDiscount) {
+                            fields.push({name: "infuProductID", value: 47});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_rpd1")
+                            });
+                        } else if (newOrder1) {
+                            fields.push({name: "infuProductID", value: 39});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_er1")
+                            });
+                        } else if (!newOrder) {
+                            fields.push({name: "infuProductID", value: 17});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_2")});
+                        } else {
+                            fields.push({name: "infuProductID", value: 31});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n1")});
+                        }
+                    } else if ($(this).attr("id") == "quantity3") {
+                        if (firstaid) {
                             fields.push({name: "infuProductID", value: 127});
                             fields.push({
                                 name: "paymentGoal",
                                 value: "PurchasedEmergencyKit_x3"
                             });
-                        } else if( quantityValue == "4-units") {
+
+                        } else if (newOrder3x30) {
+                            fields.push({name: "infuProductID", value: 131});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x30_3")
+                            });
+                        } else if (newOrder3x34) {
+                            fields.push({name: "infuProductID", value: 137});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x34_3")
+                            });
+                        } else if (newOrder3x44) {
+                            fields.push({name: "infuProductID", value: 143});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_3x44_3")
+                            });
+                        } else if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 57});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_3")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 73});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_3")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 89});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_3")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 105});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_3")
+                            });
+                        } else if (newOrderDiscount) {
+                            fields.push({name: "infuProductID", value: 43});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_rpd3")
+                            });
+                        } else if (newOrder1) {
+                            fields.push({name: "infuProductID", value: 35});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_er3")
+                            });
+                        } else if (!newOrder) {
+                            fields.push({name: "infuProductID", value: 19});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_3")});
+                        } else {
+                            fields.push({name: "infuProductID", value: 27});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n3")});
+                        }
+                    } else if ($(this).attr("id") == "quantity4") {
+                        if (firstaid) {
                             fields.push({name: "infuProductID", value: 129});
                             fields.push({
                                 name: "paymentGoal",
                                 value: "PurchasedEmergencyKit_x4"
                             });
+
+                        } else if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 59});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_4")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 75});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_4")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 91});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_4")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 107});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_4")
+                            });
+                        } else if (newOrderDiscount) {
+                            fields.push({name: "infuProductID", value: 41});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_rpd4")
+                            });
+                        } else if (newOrder1) {
+                            fields.push({name: "infuProductID", value: 33});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_er4")
+                            });
+                        } else if (!newOrder) {
+                            fields.push({name: "infuProductID", value: 21});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_4")});
+                        } else {
+                            fields.push({name: "infuProductID", value: 25});
+                            fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n4")});
                         }
-                    } else if(newOrderDiscount2) {
-                        fields.push({name: "infuProductID", value: 119});
-                        fields.push({
-                            name: "paymentGoal",
-                            value: (productData["paymentGoal"] + "_rpdd1")
-                        });
-                    } else if ($(this).find('input[name="quantity"]').length > 0) {
-                        $(this).find('input[name="quantity"]').each(function () {
-                            if ($(this).is(":checked")) {
-                                if ($(this).attr("id") == "quantity2") {
-                                    if (firstaid) {
-                                        fields.push({name: "infuProductID", value: 125});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: "PurchasedEmergencyKit_x2"
-                                        });
-
-                                    } else if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 55});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_2")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 71});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_2")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 87});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_2")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 103});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_2")
-                                        });
-                                    } else if (newOrderDiscount) {
-                                        fields.push({name: "infuProductID", value: 45});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_rpd2")
-                                        });
-                                    } else if (newOrder1) {
-                                        fields.push({name: "infuProductID", value: 37});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_er2")
-                                        });
-                                    } else if (!newOrder) {
-                                        fields.push({name: "infuProductID", value: 15});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_1")});
-                                    } else {
-                                        fields.push({name: "infuProductID", value: 29});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n2")});
-                                    }
-                                } else if ($(this).attr("id") == "quantity1") {
-                                    if (firstaid) {
-                                        fields.push({name: "infuProductID", value: 123});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: "PurchasedEmergencyKit_x1"
-                                        });
-
-                                    } else if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 61});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_1")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 77});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_1")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 93});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_1")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 109});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_1")
-                                        });
-                                    } else if(newOrder2) {
-                                        fields.push({name: "infuProductID", value: 49});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_rpr1")
-                                        });
-                                    } else if (newOrderDiscount) {
-                                        fields.push({name: "infuProductID", value: 47});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_rpd1")
-                                        });
-                                    } else if (newOrder1) {
-                                        fields.push({name: "infuProductID", value: 39});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_er1")
-                                        });
-                                    } else if (!newOrder) {
-                                        fields.push({name: "infuProductID", value: 17});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_2")});
-                                    } else {
-                                        fields.push({name: "infuProductID", value: 31});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n1")});
-                                    }
-                                } else if ($(this).attr("id") == "quantity3") {
-                                    if (firstaid) {
-                                        fields.push({name: "infuProductID", value: 127});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: "PurchasedEmergencyKit_x3"
-                                        });
-
-                                    } else if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 57});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_3")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 73});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_3")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 89});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_3")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 105});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_3")
-                                        });
-                                    } else if (newOrderDiscount) {
-                                        fields.push({name: "infuProductID", value: 43});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_rpd3")
-                                        });
-                                    } else if (newOrder1) {
-                                        fields.push({name: "infuProductID", value: 35});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_er3")
-                                        });
-                                    } else if (!newOrder) {
-                                        fields.push({name: "infuProductID", value: 19});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_3")});
-                                    } else {
-                                        fields.push({name: "infuProductID", value: 27});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n3")});
-                                    }
-                                } else if ($(this).attr("id") == "quantity4") {
-                                    if (firstaid) {
-                                        fields.push({name: "infuProductID", value: 129});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: "PurchasedEmergencyKit_x4"
-                                        });
-
-                                    } else if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 59});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_4")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 75});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_4")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 91});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_4")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 107});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_4")
-                                        });
-                                    } else if (newOrderDiscount) {
-                                        fields.push({name: "infuProductID", value: 41});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_rpd4")
-                                        });
-                                    } else if (newOrder1) {
-                                        fields.push({name: "infuProductID", value: 33});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_er4")
-                                        });
-                                    } else if (!newOrder) {
-                                        fields.push({name: "infuProductID", value: 21});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_4")});
-                                    } else {
-                                        fields.push({name: "infuProductID", value: 25});
-                                        fields.push({name: "paymentGoal", value: (productData["paymentGoal"] + "_n4")});
-                                    }
-                                } else if($(this).attr("id") == "quantity5") {
-                                    if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 63});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_5")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 79});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_5")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 95});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_5")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 111});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_5")
-                                        });
-                                    }
-                                } else if($(this).attr("id") == "quantity10") {
-                                    if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 65});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_10")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 81});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_10")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 97});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_10")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 113});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_10")
-                                        });
-                                    }
-                                } else if($(this).attr("id") == "quantity15") {
-                                    if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 67});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_15")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 83});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_15")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 99});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_15")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 115});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_15")
-                                        });
-                                    }
-                                } else if($(this).attr("id") == "quantity20") {
-                                    if (newOrder56) {
-                                        fields.push({name: "infuProductID", value: 69});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_56_20")
-                                        });
-                                    } else if (newOrder475) {
-                                        fields.push({name: "infuProductID", value: 85});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_475_20")
-                                        });
-                                    } else if (newOrder44) {
-                                        fields.push({name: "infuProductID", value: 101});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_44_20")
-                                        });
-                                    } else if (newOrder39) {
-                                        fields.push({name: "infuProductID", value: 117});
-                                        fields.push({
-                                            name: "paymentGoal",
-                                            value: (productData["paymentGoal"] + "_39_20")
-                                        });
-                                    }
-                                }
-                            }
-                        });
-                    } else {
-                        fields.push({name: "infuProductID", value: productData["infuProductID"]});
-                        fields.push({name: "paymentGoal", value: productData["paymentGoal"]});
+                    } else if($(this).attr("id") == "quantity5") {
+                        if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 63});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_5")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 79});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_5")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 95});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_5")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 111});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_5")
+                            });
+                        }
+                    } else if($(this).attr("id") == "quantity10") {
+                        if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 65});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_10")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 81});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_10")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 97});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_10")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 113});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_10")
+                            });
+                        }
+                    } else if($(this).attr("id") == "quantity15") {
+                        if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 67});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_15")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 83});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_15")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 99});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_15")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 115});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_15")
+                            });
+                        }
+                    } else if($(this).attr("id") == "quantity20") {
+                        if (newOrder56) {
+                            fields.push({name: "infuProductID", value: 69});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_56_20")
+                            });
+                        } else if (newOrder475) {
+                            fields.push({name: "infuProductID", value: 85});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_475_20")
+                            });
+                        } else if (newOrder44) {
+                            fields.push({name: "infuProductID", value: 101});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_44_20")
+                            });
+                        } else if (newOrder39) {
+                            fields.push({name: "infuProductID", value: 117});
+                            fields.push({
+                                name: "paymentGoal",
+                                value: (productData["paymentGoal"] + "_39_20")
+                            });
+                        }
                     }
-                    fields.push({name: "contactGoal", value: productData["contactGoal"]});
-//                fields.push({name: "paymentGoal", value: productData["paymentGoal"]});
-//UTM ADS parameters
-                    fields.push({name: "utm_source", value: getQueryParameter("utm_source")});
-                    fields.push({name: "utm_medium", value: getQueryParameter("utm_medium")});
-                    fields.push({name: "utm_campaign", value: getQueryParameter("utm_campaign")});
-                    fields.push({name: "utm_term", value: getQueryParameter("utm_term")});
-                    fields.push({name: "utm_content", value: getQueryParameter("utm_content")});
-
-                    fields.push({name: "firstaid", value: 1});
-
-                    //if ($('input[name="tpp"]').is(':checked')) {
-                    $.ajax({
-                        type: "POST",
-                        url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_payment.php",
-                        data: fields
-                    }).done(function (response) {
-                        var responseJson = $.parseJSON(response);
-                        if (responseJson.result == 0) {
-                            $("div.pay-over").hide();
-                            initPopup(responseJson.ErrorText);
-                        }
-                        if (responseJson.result == 1) {
-
-                            var redirect_url = "";
-                            if(firstaid) {
-                                redirect_url = "https://start.nowprep.com/first-aid/thank-you/";
-                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
-                            } else if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0 || newOrder56 || newOrder475 || newOrder44 || newOrder39) {
-                                debugger;
-                                $("div.pay-over").hide();
-
-                                $(".pop_heading").remove();
-                                $(".upsell_popup_inn").prepend('<div class="pop_heading"><h3><span class="color_red">WAIT!</span> ' + sName + ', Add our <span class="color_red">Ultimate Emergency Kit</span> to your Order for <span class="color_red">only $19</span></h3></div>');
-
-                                $(".upsell_popup_outer").attr('contactID', responseJson.contactID);
-                                $(".upsell_popup_outer").attr('creditCardID', responseJson.creditCardID);
-                                fbq('track','Purchase',{currency:'USD',value:parseFloat(responseJson.total)});
-                                window._vis_opt_queue=window._vis_opt_queue||[];
-                                window._vis_opt_queue.push(function(){_vis_opt_revenue_conversion(parseFloat(responseJson.total));});
-                                $(".upsell_popup_outer").show();
-                            } /*else if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
-                                redirect_url = "https://start.nowprep.com/ready-power/upsell-firstaid";
-                                $.redirectPost(redirect_url, {upsell: 1, total: responseJson.total, contactID: responseJson.contactID, creditCardID: responseJson.creditCardID});
-                            } */else if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
-                                redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
-                            } else if (window.location.href.indexOf("radio") > 0) {
-                                redirect_url = "https://start.nowprep.com/radio/thank-you/";
-                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
-                            } else {
-                                redirect_url = "https://start.nowprep.com/ready-vault/thank-you/";
-                                $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
-                            }
-                            return true;
-                        }
-                    });
-                    //} else {
-                    //    return false;
-                    //}
                 }
             });
+        } else {
+            fields.push({name: "infuProductID", value: productData["infuProductID"]});
+            fields.push({name: "paymentGoal", value: productData["paymentGoal"]});
         }
-        if(
-            window.location.href.indexOf("ready-power/order-info-v11") > 0 ||
-            window.location.href.indexOf("ready-power/order-info-v12") > 0 ||
-            window.location.href.indexOf("ready-power-56/order-info") > 0  ||
-            window.location.href.indexOf("ready-power-475/order-info") > 0 ||
-            window.location.href.indexOf("ready-power-44/order-info") > 0  ||
-            window.location.href.indexOf("ready-power-39/order-info") > 0
-        ) {
-            $("a.up_confirm_btn").click(function(){
-                debugger;
-                $("div.pay-over").remove();
-                $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
-                $("div.pay-over").show();
+        fields.push({name: "contactGoal", value: productData["contactGoal"]});
+//                fields.push({name: "paymentGoal", value: productData["paymentGoal"]});
+//UTM ADS parameters
+        fields.push({name: "utm_source", value: getQueryParameter("utm_source")});
+        fields.push({name: "utm_medium", value: getQueryParameter("utm_medium")});
+        fields.push({name: "utm_campaign", value: getQueryParameter("utm_campaign")});
+        fields.push({name: "utm_term", value: getQueryParameter("utm_term")});
+        fields.push({name: "utm_content", value: getQueryParameter("utm_content")});
 
-                var fields = [];
-                fields.push({name: "contactID", value: $(".upsell_popup_outer").attr('contactID')});
-                fields.push({name: "creditCardID", value: $(".upsell_popup_outer").attr('creditCardID')});
-                fields.push({name: "productID", value: 121});
+        fields.push({name: "firstaid", value: 1});
 
-                $.ajax({
-                    type: "POST",
-                    url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_upsell_payment.php",
-                    data: fields
-                }).done(function (response) {
+        //if ($('input[name="tpp"]').is(':checked')) {
+        $.ajax({
+            type: "POST",
+            url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_payment.php",
+            data: fields
+        }).done(function (response) {
+            var responseJson = $.parseJSON(response);
+            if (responseJson.result == 0) {
+                $("div.pay-over").hide();
+                initPopup(responseJson.ErrorText);
+            }
+            if (responseJson.result == 1) {
+
+                var redirect_url = "";
+                if(firstaid) {
+                    redirect_url = "https://start.nowprep.com/first-aid/thank-you/";
+                    $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
+                } else if(window.location.href.indexOf("ready-power/order-info-v11") > 0 || window.location.href.indexOf("ready-power/order-info-v12") > 0 || newOrder56 || newOrder475 || newOrder44 || newOrder39) {
                     debugger;
-                    var responseJson = $.parseJSON(response);
-                    if (responseJson.result == 0) {
-                        $("div.pay-over").hide();
-                        initPopup(responseJson.ErrorText);
-                    }
-                    if (responseJson.result == 1) {
+                    $("div.pay-over").hide();
 
-                        var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                        $.redirectPost(redirect_url, {thx:1, total: responseJson.total, addtowish:1});
-                        return true;
-                    }
-                });
-            });
-            $("a.up_no_thanks_btn").click(function(){
+                    $(".pop_heading").remove();
+                    $(".upsell_popup_inn").prepend('<div class="pop_heading"><h3><span class="color_red">WAIT!</span> ' + sName + ', Add our <span class="color_red">Ultimate Emergency Kit</span> to your Order for <span class="color_red">only $19</span></h3></div>');
+
+                    $(".upsell_popup_outer").attr('contactID', responseJson.contactID);
+                    $(".upsell_popup_outer").attr('creditCardID', responseJson.creditCardID);
+                    fbq('track','Purchase',{currency:'USD',value:parseFloat(responseJson.total)});
+                    window._vis_opt_queue=window._vis_opt_queue||[];
+                    window._vis_opt_queue.push(function(){_vis_opt_revenue_conversion(parseFloat(responseJson.total));});
+                    $(".upsell_popup_outer").show();
+                } /*else if (newOrder56 || newOrder475 || newOrder44 || newOrder39) {
+                                redirect_url = "https://start.nowprep.com/ready-power/upsell-firstaid";
+                                $.redirectPost(redirect_url, {upsell: 1, total: responseJson.total, contactID: responseJson.contactID, creditCardID: responseJson.creditCardID});
+                            } */
+                else if (window.location.href.indexOf("emergency-radio") > 0 || window.location.href.indexOf("ready-power") > 0) {
+                    redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+                    $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
+                } else if (window.location.href.indexOf("radio") > 0) {
+                    redirect_url = "https://start.nowprep.com/radio/thank-you/";
+                    $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
+                } else {
+                    redirect_url = "https://start.nowprep.com/ready-vault/thank-you/";
+                    $.redirectPost(redirect_url, {thx:1, total: responseJson.total});
+                }
+                return true;
+            }
+        });
+        //} else {
+        //    return false;
+        //}
+    }
+});
+}
+if(
+    window.location.href.indexOf("ready-power/order-info-v11") > 0 ||
+    window.location.href.indexOf("ready-power/order-info-v12") > 0 ||
+    window.location.href.indexOf("ready-power-56/order-info") > 0  ||
+    window.location.href.indexOf("ready-power-475/order-info") > 0 ||
+    window.location.href.indexOf("ready-power-44/order-info") > 0  ||
+    window.location.href.indexOf("ready-power-39/order-info") > 0
+) {
+    $("a.up_confirm_btn").click(function(){
+        debugger;
+        $("div.pay-over").remove();
+        $(this).parent().parent().parent().parent().parent().parent().append('<div class="pay-over"><div style="position: relative;margin-top: 20%;display: inline-block;text-align: center;width: 100%;height: 100%;"><img src="https://start.nowprep.com/wp-content/uploads/ajax-loading.gif" style="width: 30px;"><span style="color: white;font-size: 2em;margin-left: 5px;line-height: 3em;">Processing...</span><span style="color: white;font-size: 1.2em;"><br>Please wait while your order is processed.</span></div></div>');
+        $("div.pay-over").show();
+
+        var fields = [];
+        fields.push({name: "contactID", value: $(".upsell_popup_outer").attr('contactID')});
+        fields.push({name: "creditCardID", value: $(".upsell_popup_outer").attr('creditCardID')});
+        fields.push({name: "productID", value: 121});
+
+        $.ajax({
+            type: "POST",
+            url: "//start.nowprep.com/wp-content/themes/optimizePressTheme/lib/infu_funnel_upsell_payment.php",
+            data: fields
+        }).done(function (response) {
+            debugger;
+            var responseJson = $.parseJSON(response);
+            if (responseJson.result == 0) {
+                $("div.pay-over").hide();
+                initPopup(responseJson.ErrorText);
+            }
+            if (responseJson.result == 1) {
+
                 var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
-                $.redirectPost(redirect_url, {thx:1});
-            });
-        }
+                $.redirectPost(redirect_url, {thx:1, total: responseJson.total, addtowish:1});
+                return true;
+            }
+        });
     });
+    $("a.up_no_thanks_btn").click(function(){
+        var redirect_url = "https://start.nowprep.com/ready-power/thank-you/";
+        $.redirectPost(redirect_url, {thx:1});
+    });
+}
+});
 
 }(jQuery.noConflict()));
-

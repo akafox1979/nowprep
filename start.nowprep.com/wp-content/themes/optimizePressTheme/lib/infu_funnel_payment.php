@@ -199,6 +199,7 @@ if ($app->cfgCon("vp389")) {
                         if (isset($_POST["flwProductID"])) {
                             if (!empty($_POST["flwProductID"])) {
                                 array_push($listProducts, $_POST["flwProductID"]);
+                                $app->achieveGoal("vp389", "Purchased-Warranties", $contactID);
                             }
                         }
                         $infuOrderData = $app->placeOrder(
